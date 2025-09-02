@@ -3,13 +3,17 @@
     color: rgb(0, 0, 0); /*text color*/
 }
 
-h1 {text-align:center}
+h1.title {
+    text-align:center;
+    color: white;
+    display: block; 
+}
 
 .job-list {
     display: block; /*makes it so that each job listing is on its own line*/
     border: 0px solid rgb(23, 0, 167);
     height: fit-content;
-    width: 40%;
+    width: 92%;
     padding-top: -5px;
     padding-left: 10px;
     margin: 10px;
@@ -42,4 +46,39 @@ input {
 
 .company {
     margin-top: -5px;
+}
+
+.detail {
+    color: rgb(0, 0, 0);
+    display: none; /*hides the job details by default*/
+}
+
+#job1:checked ~ .job-detail #detail1,
+#job2:checked ~ .job-detail #detail2,
+#job3:checked ~ .job-detail #detail3,
+#job4:checked ~ .job-detail #detail4 {
+    display: block; /*shows the job details when the corresponding radio button is checked*/
+}
+
+.job-detail {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 15px; /*makes it so that the corners are rounded*/
+    background-color: rgb(255, 255, 255);
+    box-shadow:  8px 8px 15px #000000, -4px -4px 7px #668899; /*creates a shadow around the box*/
+    width: fit-content;
+    height: fit-content;
+}
+
+.container {
+    display: flex; /*allows for flexbox layout*/
+}
+
+main {
+    flex: 6; /*makes the job details take up more space*/
+}
+
+aside {
+    flex-direction: column; /*makes the job listings stack on top of each other*/
+    flex: 4; /*makes the job listings take up less space*/
 }
