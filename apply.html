@@ -1,9 +1,139 @@
+<!-- 
+Title: About page
+Date created: 26/8/25
+Date modified: 1/9/25
+Author: Ryan Tay
+-->
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Apply for our game development company through our website.">
+        <meta name="author" content="Ryan Tay">
 
     </head>
     <body>
+        <header>
+            <!-- Navbar is yet to be agreed upon with group. Must be consistent across all pages -->
+            <nav id="navbar">
+                <img src="" > <!-- TO DO: Insert logo -->
+                <ul>
+                    <li><a href="./index.html">Home</a></li> 
+                    <li><a href="./jobs.html">Jobs</a></li>
+                    <li><a href="./apply.html">Apply</a></li>
+                    <li><a href="./about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post"> <!-- 'post' method for submitting user form data -->
+                <div id="job_reference_num_container">
+                    <label for="job_reference_num">Job Reference Number:</label>
+                    <input id="job_reference_num" name="job_reference_num" type="text" pattern="[a-zA-Z0-9]{5}" required>
+                </div>
+                
+                <div id="first_name_container">
+                    <label for="first_name">First Name:</label>
+                    <input id="first_name" name="first_name" type="text" pattern="[a-zA-Z]{1,20}" required>
+                </div>
+                <div id="last_name_container">
+                    <label for="last_name">Last Name:</label>
+                    <input id="last_name" name="last_name" type="text" pattern="[a-zA-Z]{1,20}" required>
+                </div>
+                <div id="date_of_birth_container">
+                    <label for="date_of_birth">Date of Birth:</label>
+                    <input id="date_of_birth" name="date_of_birth" type="text" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[012])/\d{4}" placeholder="dd/mm/yyyy" required>
+                </div>
+                
+                <fieldset id="gender_fieldset">
+                    <legend>Gender:</legend>
+                    
+                    <label for="male"> <!-- Nest radio buttons inside labels for accessibility (user can click label to select) -->
+                        <input id="male" value="male" name="gender" type="radio" required>
+                        Male
+                    </label>
+                    <label for="female">
+                        <input id="female" value="female" name="gender" type="radio">   
+                        Female                    
+                    </label>
+                    <label for="non-binary">
+                        <input id="non-binary" value="non-binary" name="gender" type="radio">
+                        Non-binary
+                    </label>
+                </fieldset>
+                
+                <div id="street_address_container">
+                    <label for="street_address">Street Address:</label>
+                    <input id="street_address" name="street_address" type="text" pattern=".{1,40}" required>
+                </div>
+
+                <div id="suburb_town_container">
+                    <label for="suburb_town">Suburb/Town:</label>
+                    <input id="suburb_town" name="suburb_town" type="text" pattern=".{1,40}" required>
+                </div>
+                
+                <div id="state_container">
+                    <label for="state">State:</label>
+                    <select id="state" required>
+                        <option value="" selected disabled>Please select</option>
+                        <option value="vic">VIC</option>
+                        <option value="nsw">NSW</option>
+                        <option value="qld">QLD</option>
+                        <option value="nt">NT</option>
+                        <option value="wa">WA</option>
+                        <option value="sa">SA</option>
+                        <option value="tas">TAS</option>
+                        <option value="act">ACT</option>
+                    </select>
+                </div>
+                
+                <div id="postcode_container">
+                    <label for="postcode">Postcode:</label>
+                    <input id="postcode" name="postcode" type="text" pattern="\d{4}" required>
+                </div>
+                <div id="email_container">
+                    <label for="email">Email:</label>
+                    <input id="email" name="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                </div>
+                <div id="phone_num_container">
+                    <label for="phone_num">Phone Number:</label>
+                    <input id="phone_num" name="phone_num" type="text" pattern="[0-9]{8,12}" required>
+                </div>
+
+                <fieldset id="skills_fieldset">
+                    <legend>Skills:</legend>
+                    
+                    <label for="skill_1">
+                        <input id="skill_1" value="skill_1" name="skills[]" type="checkbox" required>
+                        [skill 1]
+                    </label>
+                    <label for="skill_2">
+                        <input id="skill_2" value="skill_2" name="skills[]" type="checkbox">   
+                        [skill 2]                    
+                    </label>
+                    <label for="skill_3">
+                        <input id="skill_3" value="skill_3" name="skills[]" type="checkbox">
+                        [skill 3]
+                    </label>
+                    <label for="other_skills">
+                        <input id="other" value="other" name="skills[]" type="checkbox">
+                        Other skills...
+                    </label>
+                </fieldset>
+                
+                <div id="other_skills_container">
+                    <label for="other_skills">Other Skills:</label>
+                    <textarea id="other_skills" name="other_skills"></textarea>
+                </div>
+                <input type="submit">
+                <input type="reset">
+            </form>
+        </main>
+        <footer>
+            <!-- TO DO: Insert nav links; need to be styled differently to header -->
+        </footer>
         
     </body>
 </html>
