@@ -56,6 +56,13 @@ figure img {
   border-radius: 12px;
 }
 
+.group-photo figcaption {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+
 .face {
   position: absolute;
   width: 80px;
@@ -63,8 +70,13 @@ figure img {
   border-radius: 50%;
   border: 2px solid white;
   cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
-
+.face:hover {
+  transform: scale(1.2);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  border-color: #007BFF;
+}
 .face1 { top: 50px; left: 80px; }   /* adjust positions */
 .face2 { top: 50px; left: 250px; }
 .face3 { top: 200px; left: 80px; }
