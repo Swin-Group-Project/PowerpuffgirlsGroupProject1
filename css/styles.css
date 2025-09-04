@@ -11,20 +11,20 @@ body {
 
 }
 
-body::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image:
-        radial-gradient(at 20% 20%, #9b5de5, transparent 40%),
-        radial-gradient(at 80% 60%, #00f5d4, transparent 40%),
-        radial-gradient(at 50% 80%, #f72585, transparent 40%),
-        radial-gradient(at 80% 25%, #00b4d8, transparent 40%);
-    animation: moveBlob 20s linear infinite, Blobpulse 3s infinite alternate;
-    background-size: 200% 200%;
+body::before { /*::before to make another layer in the body section*/
+    content: ""; /*necessary for the ::before to work*/
+    position: absolute; /*makes the position absolute so that it can be positioned anywhere*/
+    inset: 0;  /*blobs wouldnt show unless i did this*/
+    background-image: /* creates the blobs using radial gradients*/
+        radial-gradient(at 20% 20%, #4361ee, transparent 40%),
+        radial-gradient(at 80% 60%, #4cc9f0, transparent 40%),
+        radial-gradient(at 50% 80%, #7209b7, transparent 40%),
+        radial-gradient(at 80% 25%, #f72585, transparent 40%);
+    animation: moveBlob 20s linear infinite, Blobpulse 3s infinite alternate; /*moves and pulses the blobs*/
+    background-size: 200% 200%; /*makes the blobs bigger so that they can move around more*/
     z-index : -10; /*makes sure the background is behind all other elements*/
 }
-@keyframes moveBlob {
+@keyframes moveBlob { /*moves the blobs around*/
     0% {
         background-position: 0% 0%;
     }
@@ -36,7 +36,7 @@ body::before {
     }
 }
 
-@keyframes Blobpulse {
+@keyframes Blobpulse { /*makes the blobs pulse*/
     0% {
         filter: brightness(0.3);
     }
