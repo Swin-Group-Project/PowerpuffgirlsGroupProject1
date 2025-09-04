@@ -1,8 +1,84 @@
 /*
-filename: Lira
+filename: About Us
 author: Lira
 created: Aug 30 2025
 last modified: September 1 2025
 description: [html files it refers to (if known)]
 */
+
+.members {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 20px;
+  margin: 0 auto;  /* center horizontally */
+}
+
+.member {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  scroll-margin-top: 100px; /* <-- this moves the scroll-down anchor a bit lower */
+}
+
+.member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.member:target {
+  outline: 4px solid #007BFF; /* blue border */
+  transition: outline 0.3s;
+}
+
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover; /* keeps faces neat */
+}
+
+figure img {
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.group-photo {
+  position: relative;
+  display: inline-block;
+}
+
+.group-photo img {
+  width: 600px;
+  border-radius: 12px;
+}
+
+.group-photo figcaption {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+
+.face {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.face:hover {
+  transform: scale(1.2);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  border-color: #007BFF;
+}
+.face1 { top: 50px; left: 80px; }   /* adjust positions */
+.face2 { top: 50px; left: 250px; }
+.face3 { top: 200px; left: 80px; }
+.face4 { top: 200px; left: 250px; }
 
