@@ -1,0 +1,86 @@
+:root{
+    background: linear-gradient(135deg, #0f2027, #2c5364);/*135deg means the gradient goes from top right to bottom left*/
+    color: rgb(0, 0, 0); /*text color*/
+}
+
+/*jobs.html styling*/
+
+h1.title {
+    text-align:center;
+    color: white;
+    display: block; 
+}
+
+.job-list {
+    display: block; /*makes it so that each job listing is on its own line*/
+    border: 0px solid rgb(23, 0, 167);
+    height: fit-content;
+    width: 92%;
+    padding-top: -5px;
+    padding-left: 10px;
+    margin: 10px;
+    border-radius: 15px; /*makes it so that the corners are rounded*/
+    background-color: rgb(255, 255, 255);
+    text-align: left;
+    cursor: pointer;
+    box-shadow:  8px 8px 15px #000000, -4px -4px 7px #668899; /*creates a shadow around the box*/
+    transition: all 0.5s ease /*makes the transition smooth when hovering over the job listing*/
+}
+
+input.jobpage {
+    display: none;/*hide the radio buttons*/
+}
+
+.job-list:hover {
+    background-color: rgb(204, 204, 204); /*changes background color when hovering over the job listing*/
+    box-shadow:  4px 4px 6px #000000, -4px -4px 6px #668899; /*changes the shadow when hovering over the job listing*/
+    transform: scale(1.05); /*scales the job listing up when hovering over it*/
+    transition: all 0.5s ease;
+}
+.job-list:active {
+    transform: scale(1); /*scales the job listing back to normal when clicking on it*/
+    transition: all 0.1s ease-out; /*makes the transition smooth when clicking on the job listing*/
+}
+
+.location {
+    margin-top: -5px;
+}
+
+.company {
+    margin-top: -5px;
+}
+
+.detail {
+    color: rgb(0, 0, 0);
+    display: none; /*hides the job details by default*/
+}
+
+#job1:checked ~ .job-detail #detail1,
+#job2:checked ~ .job-detail #detail2,
+#job3:checked ~ .job-detail #detail3,
+#job4:checked ~ .job-detail #detail4 {
+    display: block; /*shows the job details when the corresponding radio button is checked*/
+}
+
+.job-detail {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 15px; /*makes it so that the corners are rounded*/
+    background-color: rgb(255, 255, 255);
+    box-shadow:  8px 8px 15px #000000, -4px -4px 7px #668899; /*creates a shadow around the box*/
+    width: fit-content;
+    height: fit-content;
+}
+
+.container {
+    display: flex; /*allows for flexbox layout*/
+}
+
+main.job-detail {
+    flex: 6; /*makes the job details take up more space*/
+}
+
+aside.job-page {
+    flex-direction: column; /*makes the job listings stack on top of each other*/
+    flex: 4; /*makes the job listings take up less space*/
+}

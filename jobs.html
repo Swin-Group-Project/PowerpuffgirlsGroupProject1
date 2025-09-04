@@ -5,45 +5,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jobs page</title>
-    <h1>Job Application Page</h1>
 </head>
 <body>
-    <header>
-        <aside>
-            <input type="radio" name="joblist" id="job1"><!--Makes input so the webpage is interactive without Javascript-->
-            <input type="radio" name="joblist" id="job2"><!--same name so only 1 can be selected at a time-->
-            <input type="radio" name="joblist" id="job3">
-            <input type="radio" name="joblist" id="job4">
-            <label for="job1">
-                <div id="job1" class="job-list"><!--id so the page knows which input is selected when box is clicked-->
-                    <h2>Software Engineer</h2>  
-                    <p class="location">Job location placeholder</p>
-                    <p class="company">Job company placeholder</p>
+        <h1 class="title">Job listings page</h1>
+        <section class="container"><!--so title can be on top and boxes can be side by side-->
+            <input class="jobpage" type="radio" name="joblist" id="job1"><!--Makes input so the webpage is interactive without Javascript-->
+            <input class="jobpage" type="radio" name="joblist" id="job2"><!--same name so only 1 can be selected at a time-->
+            <input class="jobpage" type="radio" name="joblist" id="job3">
+            <input class="jobpage" type="radio" name="joblist" id="job4">
+            <aside class="job-page">
+                <label for="job1">
+                    <div id="job1" class="job-list"><!--id so the page knows which input is selected when box is clicked-->
+                        <header><h2>Software Engineer</h2></header>  
+                        <p class="location">Job location placeholder</p>
+                        <p class="company">Job company placeholder</p>
+                    </div>
+                </label>
+                <label for="job2">
+                    <div id="job2" class="job-list">
+                        <header><h2>Model Designer</h2></header>
+                        <p class="location">Job location placeholder</p>
+                        <p class="company">Job company placeholder</p>
+                    </div>
+                </label>
+                <label for="job3">
+                    <div id="job3" class="job-list">
+                        <header><h2>Team Manager</h2></header>
+                        <p class="location">Job location placeholder</p>
+                        <p class="company">Job company placeholder</p>
+                    </div>
+                </label>
+                <label for="job4">
+                    <div id="job4" class="job-list">
+                        <header><h2>Quality Assurance</h2></header>
+                        <p class="location">Job location placeholder</p>
+                        <p class="company">Job company placeholder</p>
+                    </div>
+                </label>
                 </div>
-            </label>
-            <label for="job2">
-                <div id="job2" class="job-list">
-                    <h2>Model Designer</h2>
-                    <p class="location">Job location placeholder</p>
-                    <p class="company">Job company placeholder</p>
+            </aside>
+            <main class="job-detail">
+                <div class="detail" id="detail1">
+                    placeholder detail 1 
                 </div>
-            </label>
-            <label for="job3">
-                <div id="job3" class="job-list">
-                    <h2>Team Manager</h2>
-                    <p class="location">Job location placeholder</p>
-                    <p class="company">Job company placeholder</p>
+                <div class="detail" id="detail2">
+                    placeholder detail 2 
                 </div>
-            </label>
-            <label for="job4">
-                <div id="job4" class="job-list">
-                    <h2>Quality Assurance</h2>
-                    <p class="location">Job location placeholder</p>
-                    <p class="company">Job company placeholder</p>
+                <div class="detail" id="detail3">
+                    placeholder detail 3
                 </div>
-            </label>
-            </div>
-        </aside>
-    </header>
+                <div class="detail" id="detail4">
+                    placeholder detail 4 
+                </div>
+            </main>
+        </section>
 </body>
-</html>     
+</html> 
