@@ -6,6 +6,27 @@ last modified: September 1 2025
 description: [html files it refers to (if known)]
 */
 
+/* Navigation Bar Styles */
+/* RYAN: This is just a temporary layout, we will use flexbox to incorporate responsive design later */
+header {
+    background-color: white;
+}
+
+nav > img, nav > ul {
+    display: inline-block;
+}
+
+nav > ul > li {
+    list-style: none;
+    display: inline-block;
+}
+
+nav > ul > li > a {
+    text-decoration: none;
+}
+
+
+/*Team Members section overall layout*/
 .members {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 columns */
@@ -13,6 +34,7 @@ description: [html files it refers to (if known)]
   margin: 0 auto;  /* center horizontally */
 }
 
+/*profiles layout settings*/
 .member {
   background: #f4f4f4;
   padding: 20px;
@@ -32,6 +54,7 @@ description: [html files it refers to (if known)]
   transition: outline 0.3s;
 }
 
+/*Fun facts table layout and alignment*/ 
 .fun-facts {
     margin: 0 auto;          /* centers the table */
     border-collapse: collapse; 
@@ -51,6 +74,7 @@ description: [html files it refers to (if known)]
     text-align: center;
 }
 
+/*group photo alignment settings*/
 .group-photo {
     text-align: center;       /* centers image and caption */
     margin: 20px 0;
@@ -61,7 +85,7 @@ description: [html files it refers to (if known)]
   width: 600px;
   border-radius: 12px;
 }
-
+/*group image caption alignment*/
 .group-photo figcaption {
   text-align: center;
   margin-top: 10px;
