@@ -1,8 +1,8 @@
 :root{
     color: rgb(0, 0, 0); /*text color*/
-    --main-pastel-blue: var(#5575a6);
-    --main-dark-blue: var(#232d3d);
-    --main-white: var(#e6e9ed);
+    --main-pastel-blue: #5575a6;
+    --main-dark-blue: #232d3d;
+    --main-white: #e6e9ed;
 }
 
 * {
