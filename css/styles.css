@@ -1,6 +1,13 @@
 :root{
     color: rgb(0, 0, 0); /*text color*/
 }
+
+/* Navigation Bar Styles */
+nav > ul {
+    list-style: none;
+}
+
+
 body {
     margin: 0;
     height: 100vh; /*makes the body take up the full height of the viewport*/
