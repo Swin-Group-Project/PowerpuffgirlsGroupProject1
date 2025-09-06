@@ -76,6 +76,16 @@ nav > ul > li > a {
     text-decoration: none;
 }
 
+/*nested list settings*/
+ul {
+    list-style-type: disc;  /* normal bullets for main list */
+    padding-left: 20px;     /* indent main list */
+}
+
+ul ul {
+    list-style-type: circle; /* different bullet for nested list */
+    padding-left: 20px;      /* indent nested list further */
+}
 
 /*Team Members section overall layout*/
 .members {
