@@ -1,6 +1,34 @@
 :root{
     color: rgb(0, 0, 0); /*text color*/
 }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar Styles */
+/* RYAN: This is just a temporary layout, we will use flexbox to incorporate responsive design later */
+
+header {
+    background-color: white;
+}
+
+nav > img, nav > ul {
+    display: inline-block;
+}
+
+nav > ul > li {
+    list-style: none;
+    display: inline-block;
+}
+
+nav > ul > li > a {
+    text-decoration: none;
+}
+
+
 body {
     margin: 0;
     height: 100vh; /*makes the body take up the full height of the viewport*/
@@ -14,7 +42,7 @@ body {
 body::before { /*::before to make another layer in the body section*/
     content: ""; /*necessary for the ::before to work*/
     position: absolute; /*makes the position absolute so that it can be positioned anywhere*/
-    inset: 0;  /*blobs wouldnt show unless i did this*/
+    inset: 0; /*blobs wouldnt show unless i did this*/
     background-image: /* creates the blobs using radial gradients*/
         radial-gradient(at 20% 20%, #4361ee, transparent 40%),
         radial-gradient(at 80% 60%, #4cc9f0, transparent 40%),
