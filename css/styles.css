@@ -1,5 +1,8 @@
 :root{
     color: rgb(0, 0, 0); /*text color*/
+    --main-pastel-blue: var(#5575a6);
+    --main-dark-blue: var(#232d3d);
+    --main-white: var(#e6e9ed);
 }
 
 * {
@@ -36,7 +39,6 @@ body {
     background: black;
     overflow: hidden; /*hides any overflow*/
     z-index: -20; /*makes sure the background is behind all other elements*/
-
 }
 
 body::before { /*::before to make another layer in the body section*/
