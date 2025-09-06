@@ -32,26 +32,32 @@ description: [html files it refers to (if known)]
   transition: outline 0.3s;
 }
 
-
-.profile-pic {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-  object-fit: cover; /* keeps faces neat */
+.fun-facts {
+    margin: 0 auto;          /* centers the table */
+    border-collapse: collapse; 
+    text-align: center;        /* centers text in cells */
 }
 
-figure img {
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+.fun-facts th, .fun-facts td {
+    border: 1px solid #ccc;  
+    padding: 8px 12px;
+}
+
+
+.fun-facts caption {
+    caption-side: top;    /* centers table caption */
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .group-photo {
-  position: relative;
-  display: inline-block;
+    text-align: center;       /* centers image and caption */
+    margin: 20px 0;
 }
 
 .group-photo img {
+  margin: 0 auto;           /* centers the image */
   width: 600px;
   border-radius: 12px;
 }
@@ -61,24 +67,3 @@ figure img {
   margin-top: 10px;
   font-weight: bold;
 }
-
-
-.face {
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  border: 2px solid white;
-  cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.face:hover {
-  transform: scale(1.2);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-  border-color: #007BFF;
-}
-.face1 { top: 50px; left: 80px; }   /* adjust positions */
-.face2 { top: 50px; left: 250px; }
-.face3 { top: 200px; left: 80px; }
-.face4 { top: 200px; left: 250px; }
-
