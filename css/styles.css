@@ -33,6 +33,7 @@ description: Layout and styling for header/footer navigation menu*/
 /* RYAN: This is just a temporary layout, we will use flexbox to incorporate responsive design later */
 header {
     background-color: white;
+    display: none;
 }
 
 nav > img, nav > ul {
