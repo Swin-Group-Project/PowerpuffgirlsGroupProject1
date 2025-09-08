@@ -51,7 +51,7 @@ body::before { /*::before to make another layer in the body section*/
         radial-gradient(at 50% 80%, #7209b7, transparent 40%),
         radial-gradient(at 80% 25%, #f72585, transparent 40%);
     animation: moveBlob 20s linear infinite, Blobpulse 3s infinite alternate; /*moves and pulses the blobs*/
-    background-size: 200% 200%; /*makes the blobs bigger so that they can move around more*/
+    background-size: 200% 200%; /*makes the background bigger so that they can move around more*/
     z-index : -10; /*makes sure the background is behind all other elements*/
 }
 @keyframes moveBlob { /*moves the blobs around*/
@@ -134,7 +134,9 @@ input.jobpage {
 }
 
 .job-detail {
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
     padding: 10px;
     border-radius: 15px; /*makes it so that the corners are rounded*/
     background-color: rgb(255, 255, 255);
@@ -144,14 +146,41 @@ input.jobpage {
 }
 
 .container {
-    display: flex; /*allows for flexbox layout*/
+    display: flex; /*makes the container a flexbox*/
+    flex-direction: row; /*makes the job listings and job details side by side*/
 }
 
 main.job-detail {
-    flex: 6; /*makes the job details take up more space*/
+    flex: 75%;
+    width: 75%; /*makes the job details take up more space*/
 }
 
 aside.job-page {
     flex-direction: column; /*makes the job listings stack on top of each other*/
-    flex: 4; /*makes the job listings take up less space*/
+    flex: 25%; /*makes the job listings take up less space*/
+    float:right;
+    width: 25%;
+    margin: auto;
+    border-left-style: double;
+    border-left-color: grey;
 }
+
+footer.job-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ref-num {
+    text-align: left;
+}
+
+.reporting-line {
+    text-align: right;
+    margin-right: 10px;
+}
+
+.job-summary-list {
+    margin-left: 20px;
+}
+
+
