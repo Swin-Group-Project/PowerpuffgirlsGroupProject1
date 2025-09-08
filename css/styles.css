@@ -1,21 +1,39 @@
+/* 
+filename: styles.css
+authors: Aron Winjoto, Ryan Tay, Lira Khisha
+created: 26/9/25
+last modified: 7/9/25
+description: applies to index.html, about.html, jobs.html, apply.html
+*/
+
 :root{
     color: rgb(0, 0, 0); /*text color*/
-    --main-pastel-blue: #5575a6;
+
+    --main-blue: #5575a6;
     --main-dark-blue: #232d3d;
     --main-white: #e6e9ed;
+    --text-white: #fafcfc;
+
+    font-family: "Saira", sans-serif;
 }
 
 * {
-    box-sizing: border-box;
+    /* Simple CSS reset for consistency across different browsers */
+    box-sizing: border-box; /* width/height will now include border */
     margin: 0;
     padding: 0;
 }
 
-/* Navigation Bar Styles */
-/* RYAN: This is just a temporary layout, we will use flexbox to incorporate responsive design later */
+/* NAVIGATION BAR STYLES
+author: Ryan Tay
+created: 7/9/25
+last modified: 7/9/25
+description: Layout and styling for header/footer navigation menu*/
 
+/* RYAN: This is just a temporary layout, we will use flexbox to incorporate responsive design later */
 header {
     background-color: white;
+    display: none;
 }
 
 nav > img, nav > ul {
@@ -31,7 +49,12 @@ nav > ul > li > a {
     text-decoration: none;
 }
 
-
+/* BACKGROUND KEYFRAME ANIMATION
+author: Aron Winjoto
+created: 
+last modified: 
+description: 
+*/
 body {
     margin: 0;
     height: 100vh; /*makes the body take up the full height of the viewport*/
@@ -74,7 +97,13 @@ body::before { /*::before to make another layer in the body section*/
         filter: brightness(1);
     }
 }
-/*jobs.html styling*/
+
+
+/* JOB PAGE STYLES
+author: Aron Winjoto
+created: 
+last modified: 
+*/
 
 h1.title {
     text-align:center;
@@ -184,3 +213,83 @@ footer.job-footer {
 }
 
 
+
+
+/* APPLY PAGE STYLES
+author: Ryan Tay
+created: 7/9/25
+last modified: 7/9/25
+*/
+
+#apply_heading, #preamble {
+    color: var(--text-white);
+    text-align: center;
+}
+
+#wrapper {
+    background-color: var(--main-dark-blue);
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto 0px; /* Center the wrapper */
+    box-shadow: 10px 10px 3px 3px rgba(0,0,0,0.3);
+}
+
+#apply_form {
+    background-color: var(--main-white);
+    margin: 20px 0px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.flex_item {
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#gender_fieldset, #skills_fieldset {
+    width: 97.5%;
+    display: grid;
+    margin: 0 auto;
+}
+
+#other_skills {
+    display: none;
+    margin: 5px 0px 10px 10px;
+}
+
+#other:checked + textarea {
+    display: block; /* Show the textarea when the user checks "other skills" */
+}
+
+#apply_form, #wrapper {
+    padding: 30px;
+    border-radius: 5px;
+}
+
+#button_container {
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+#button_container > input {
+    font-family: "Saira", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: inline-block;
+    position: relative;
+    margin-top: 20px;
+    width: 30%;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--main-blue);
+    color: var(--text-white);
+    transition: all 0.2s ease-in-out;
+}
+
+#button_container > input:hover {
+    box-shadow: 4px 4px rgba(0,0,0,0.5);
+    background-color: var(--main-dark-blue);
+    transform: translate(-3px, -2px);
+}

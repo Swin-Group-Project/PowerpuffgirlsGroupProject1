@@ -12,7 +12,10 @@ Author: Ryan Tay
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Apply for our game development company through our website.">
         <meta name="author" content="Ryan Tay">
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Establish a connection with google API -->
+        <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> <!-- Load Google font: "Saira"-->
         <title>Apply Now</title>
     </head>
     <body>
@@ -30,23 +33,24 @@ Author: Ryan Tay
         </header>
         <main>
             <div id="wrapper">
-                <h1>Apply Now</h1>
-                <p>If you're serious about becoming an honourary Powerpuff Girl, fill out the form below and we will reach out to you soon!</p>
-                <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post"> <!-- 'post' method for submitting user form data -->
-                    <div id="job_reference_num_container">
+                <h1 id="apply_heading">Apply Now</h1>
+                <p id="preamble">If you're serious about becoming an honourary Powerpuff Girl, fill out the form below and we will reach out to you soon!</p>
+                <form id="apply_form" action="https://mercury.swin.edu.au/it000000/formtest.php" method="post"> <!-- 'post' method used for submitting user form data -->
+                    
+                    <div id="job_reference_num_container" class="flex_item">
                         <label for="job_reference_num">Job Reference Number:</label>
                         <input id="job_reference_num" name="job_reference_num" type="text" pattern="[a-zA-Z0-9]{5}" required>
                     </div>
                     
-                    <div id="first_name_container">
+                    <div id="first_name_container"   class="flex_item">
                         <label for="first_name">First Name:</label>
                         <input id="first_name" name="first_name" type="text" pattern="[a-zA-Z]{1,20}" required>
                     </div>
-                    <div id="last_name_container">
+                    <div id="last_name_container" class="flex_item">
                         <label for="last_name">Last Name:</label>
                         <input id="last_name" name="last_name" type="text" pattern="[a-zA-Z]{1,20}" required>
                     </div>
-                    <div id="date_of_birth_container">
+                    <div id="date_of_birth_container" class="flex_item">
                         <label for="date_of_birth">Date of Birth:</label>
                         <input id="date_of_birth" name="date_of_birth" type="text" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[012])/\d{4}" placeholder="dd/mm/yyyy" required>
                     </div>
@@ -60,7 +64,7 @@ Author: Ryan Tay
                         </label>
                         <label for="female">
                             <input id="female" value="female" name="gender" type="radio">   
-                            Female                    
+                            Female
                         </label>
                         <label for="non-binary">
                             <input id="non-binary" value="non-binary" name="gender" type="radio">
@@ -68,17 +72,17 @@ Author: Ryan Tay
                         </label>
                     </fieldset>
                     
-                    <div id="street_address_container">
+                    <div id="street_address_container" class="flex_item">
                         <label for="street_address">Street Address:</label>
                         <input id="street_address" name="street_address" type="text" pattern=".{1,40}" required>
                     </div>
 
-                    <div id="suburb_town_container">
+                    <div id="suburb_town_container" class="flex_item">
                         <label for="suburb_town">Suburb/Town:</label>
                         <input id="suburb_town" name="suburb_town" type="text" pattern=".{1,40}" required>
                     </div>
                     
-                    <div id="state_container">
+                    <div id="state_container" class="flex_item">
                         <label for="state">State:</label>
                         <select id="state" required>
                             <option value="" selected disabled>Please select</option>
@@ -93,22 +97,29 @@ Author: Ryan Tay
                         </select>
                     </div>
                     
-                    <div id="postcode_container">
+                    <div id="postcode_container" class="flex_item">
                         <label for="postcode">Postcode:</label>
                         <input id="postcode" name="postcode" type="text" pattern="\d{4}" required>
                     </div>
-                    <div id="email_container">
+                    <div id="email_container" class="flex_item">
                         <label for="email">Email:</label>
                         <input id="email" name="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                     </div>
-                    <div id="phone_num_container">
+                    <div id="phone_num_container" class="flex_item">
                         <label for="phone_num">Phone Number:</label>
                         <input id="phone_num" name="phone_num" type="text" pattern="[0-9]{8,12}" required>
                     </div>
 
                     <fieldset id="skills_fieldset">
                         <legend>Skills:</legend>
-                        
+                        <label for="project_management">
+                            <input id="project_management" value="project_management" name="skills[]" type="checkbox" required>
+                            Project Management
+                        </label>
+                        <label for="database_management">
+                            <input id="database_management" value="database_management" name="skills[]" type="checkbox">   
+                            Database Management (SQL)          
+                        </label>
                         <label for="frontend">
                             <input id="frontend" value="frontend" name="skills[]" type="checkbox" required>
                             Front-End Suite: HTML/CSS/JavaScript (Node.js, React.js)
@@ -117,10 +128,6 @@ Author: Ryan Tay
                             <input id="backend" value="backend" name="skills[]" type="checkbox">   
                             Back-End Languages: C#/C++, Java, Python                
                         </label>
-                        <label for="java">
-                            <input id="java" value="java" name="skills[]" type="checkbox">
-                            Java
-                        </label>
                         <label for="lua">
                             <input id="lua" value="lua" name="skills[]" type="checkbox">
                             Lua
@@ -128,15 +135,6 @@ Author: Ryan Tay
                         <label for="rust">
                             <input id="rust" value="rust" name="skills[]" type="checkbox">
                             Rust
-                        </label>
-                        <br>
-                        <label for="project_management">
-                            <input id="project_management" value="project_management" name="skills[]" type="checkbox" required>
-                            Project Management
-                        </label>
-                        <label for="database_management">
-                            <input id="database_management" value="database_management" name="skills[]" type="checkbox">   
-                            Database Management (SQL)          
                         </label>
                         <label for="unity">
                             <input id="unity" value="unity" name="skills[]" type="checkbox">
@@ -149,15 +147,15 @@ Author: Ryan Tay
                         <label for="other">
                             <input id="other" value="other" name="skills[]" type="checkbox">
                             Other skills...
+                            <textarea id="other_skills" name="other_skills" rows="4"  cols="40" placeholder="Please list any other skills..."></textarea>
                         </label>
                     </fieldset>
                     
-                    <div id="other_skills_container">
-                        <label for="other_skills">Other Skills:</label>
-                        <textarea id="other_skills" name="other_skills"></textarea>
+                    <div id="button_container" class="flex_item">
+                        <input id="submit_btn" type="submit" value="Submit Form" class="flex_item">
+                        <input id="reset_btn" type="reset" value="Reset" class="flex_item">
                     </div>
-                    <input type="submit" value="Submit Form">
-                    <input type="reset" value="Clear">
+                    
                 </form>
             </div>
         </main>
