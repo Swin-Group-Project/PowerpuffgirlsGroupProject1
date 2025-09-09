@@ -108,6 +108,21 @@ ul ul {
   scroll-margin-top: 100px; /* <-- this moves the scroll-down anchor a bit lower */
 }
 
+.student-id {
+  float: right;
+  font-weight: normal;
+  color: #333;  /*to match with other text in profile section */
+  font-size: 1em;
+  background: none;
+}
+
+/*optional for future grid/flexbox layout 
+  .member-content {
+      text-align: center;
+      clear: both;       
+  } 
+*/
+
 .member:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
