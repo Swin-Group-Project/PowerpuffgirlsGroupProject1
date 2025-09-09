@@ -14,7 +14,8 @@ description: applies to index.html, about.html, jobs.html, apply.html
     --main-white: #e6e9ed;
     --text-white: #fafcfc;
 
-    font-family: "Saira", sans-serif;
+    font-family: "Barlow", sans-serif;
+    letter-spacing: -1px;
 }
 
 * {
@@ -194,9 +195,39 @@ aside.job-page {
     border-left-color: grey;
 }
 
-footer.job-footer {
+.company, .location {
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+.location {
+    margin-bottom: 5px;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 20
+}
+
+
+#locationicon {
+    font-size: 20px;
+}
+
+#domainicon {
+    font-size: 20px;
+}
+
+.job-footing {
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
+    color: grey;
+    font-size: small;
 }
 
 .ref-num {
