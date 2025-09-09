@@ -97,7 +97,10 @@ ul ul {
 
 /*profiles layout settings*/
 .member {
+  position: relative;
+  overflow: hidden;
   background: #f4f4f4;
+  min-height: 300px;
   padding: 20px;
   border-radius: 12px;
   text-align: center;
@@ -108,6 +111,45 @@ ul ul {
 .member:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.member:hover::before {
+  opacity: 1; /* semi-transparent */
+}
+
+.member::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;     /* prevents multiple copies */
+  opacity: 0; /* hidden at first */
+  transition: opacity 0.4s ease-in-out;
+  z-index: 0; /* keeps it behind text */
+}
+
+.member * {
+  position: relative;
+  z-index: 1;
+}
+
+#member1::before {
+  background-image: url("../images/venson.jpg");
+}
+
+#member2::before {
+    background-image: url("../images/lira.jpg");
+}
+
+#member3::before {
+  background-image: url("../images/ryan.jpg");
+}
+
+#member4::before {
+  background-image: url("../images/aron.jpg");
 }
 
 .member:target {
