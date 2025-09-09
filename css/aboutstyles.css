@@ -156,4 +156,12 @@ ul ul {
 .about-section {
     margin: 20px;
     padding: 20px;
+
+    /* temporary fix */
+    background-color: white;
+    border-radius: 10px;
+}
+
+#meet-section p {
+    margin: 1em 0;
 }
