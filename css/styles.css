@@ -15,7 +15,8 @@ description: applies to index.html, about.html, jobs.html, apply.html
     --text-white: #fafcfc;
 
     font-family: "Barlow", sans-serif;
-    letter-spacing: -1px;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
 }
 
 * {
@@ -243,7 +244,7 @@ aside.job-page {
     margin-left: 20px;
 }
 
-/* APPLY PAGE STYLES
+/* APPLY PAGE STYLES - START
 author: Ryan Tay
 created: 7/9/25
 last modified: 13/9/25
@@ -282,12 +283,12 @@ last modified: 13/9/25
     margin: 0 auto;
 }
 
-#other_skills {
+#other_skills_container {
     display: none;
     margin: 5px 0px 10px 10px;
 }
 
-#other:checked + textarea {
+#other:checked + div, #other:checked + div > * {
     display: block; /* Show the textarea when the user checks "other skills" */
 }
 
@@ -313,11 +314,84 @@ last modified: 13/9/25
     border-radius: 10px;
     background-color: var(--main-blue);
     color: var(--text-white);
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; /* transition box-shadow, background-color, translate position */
 }
 
 #button_container > input:hover {
     box-shadow: 4px 4px rgba(0,0,0,0.5);
     background-color: var(--main-dark-blue);
     transform: translate(-3px, -2px);
+    cursor: pointer;
 }
+
+input:focus {
+    outline: 0.2em dashed var(--main-blue);
+}
+
+/* Validation styling - radio/checkbox inputs have their own custom styling */
+input:not([type="checkbox"], [type="radio"]):valid {
+    border: 2px solid #a3db40;
+    background-color: #deebc7;
+}
+
+input:not([type="checkbox"], [type="radio"]):invalid {
+    border: 2px solid #db4d40;
+    background-color: #fae8e6;
+}
+
+/* Custom checkboxes
+
+Remove default browser styling and create a checkbox of custom height, width and colour
+Pseudo-element box-shadow appears when checked using the 'scale' property
+
+credit: Stephanie Eckles (https://moderncss.dev/pure-css-custom-checkbox-style/) */
+
+.checkbox_container {
+    font-size: 1.2em;
+    margin: 0.2em 0 0.2em 1em;
+    display: grid;
+    grid-template-columns: 1em auto; /* checkbox: 1em | label: remaining available space */
+    gap: 1em; /* the space between the checkbox and label*/
+}
+
+#skills_fieldset label:first-of-type {
+    margin-top: 1em;
+}
+
+#skills_fieldset label:last-of-type {
+    margin-bottom: 1em;
+}
+
+input[type=checkbox] {
+    -webkit-appearance: none; /* supports Chrome, Safari, Opera */
+    appearance: none; /* supports Mozilla Firefox */
+    margin: 0;
+    background-color: #fff; /* iOS 14 or older have default gradient background styling */
+    font: inherit;
+    color: currentColor; /* same as parent color  */
+    width: 1.3em;
+    height: 1.3em;
+    border: 0.13em solid currentColor;
+    border-radius: 0.3em;
+    /* for ::before pseudo-element*/
+    display: grid;
+    place-content: center; 
+
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 0.7em;
+    height: 0.7em;
+    transform: scale(0);
+    transition: 0.1s transform ease-in-out;
+    box-shadow: inset 1em 1em var(--main-dark-blue);
+    border-radius: 0.15em;
+    background-color: CanvasText; /* Windows High Contrast Mode */
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1)
+}
+
+/* APPLY PAGE STYLES - END */

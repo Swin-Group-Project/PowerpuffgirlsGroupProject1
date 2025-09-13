@@ -113,42 +113,45 @@ Author: Ryan Tay
 
                     <fieldset id="skills_fieldset">
                         <legend>Skills:</legend>
-                        <label for="project_management">
+                        <label for="project_management" class="checkbox_container">
                             <input id="project_management" value="project_management" name="skills[]" type="checkbox" required>
                             Project Management
                         </label>
-                        <label for="database_management">
+                        <label for="database_management" class="checkbox_container">
                             <input id="database_management" value="database_management" name="skills[]" type="checkbox">   
                             Database Management (SQL)          
                         </label>
-                        <label for="frontend">
+                        <label for="frontend" class="checkbox_container">
                             <input id="frontend" value="frontend" name="skills[]" type="checkbox" required>
                             Front-End Suite: HTML/CSS/JavaScript (Node.js, React.js)
                         </label>
-                        <label for="backend">
+                        <label for="backend" class="checkbox_container">
                             <input id="backend" value="backend" name="skills[]" type="checkbox">   
                             Back-End Languages: C#/C++, Java, Python                
                         </label>
-                        <label for="lua">
+                        <label for="lua" class="checkbox_container">
                             <input id="lua" value="lua" name="skills[]" type="checkbox">
                             Lua
                         </label>
-                        <label for="rust">
+                        <label for="rust" class="checkbox_container">
                             <input id="rust" value="rust" name="skills[]" type="checkbox">
                             Rust
                         </label>
-                        <label for="unity">
+                        <label for="unity" class="checkbox_container">
                             <input id="unity" value="unity" name="skills[]" type="checkbox">
                             Unity
                         </label>
-                        <label for="adobe_animate">
+                        <label for="adobe_animate" class="checkbox_container">
                             <input id="adobe_animate" value="adobe_animate" name="skills[]" type="checkbox">
                             Adobe Animate
                         </label>
-                        <label for="other">
+                        <label for="other" class="checkbox_container">
                             <input id="other" value="other" name="skills[]" type="checkbox">
                             Other skills...
-                            <textarea id="other_skills" name="other_skills" rows="4"  cols="40" placeholder="Please list any other skills..."></textarea>
+                            <div id="other_skills_container">
+                                <label for="other_skills">Enter other skills below: </label>
+                                <textarea id="other_skills" name="other_skills" rows="4"  cols="40" placeholder="Link to your portfolio, list any other relevant skills here..."></textarea>
+                            </div>
                         </label>
                     </fieldset>
                     
