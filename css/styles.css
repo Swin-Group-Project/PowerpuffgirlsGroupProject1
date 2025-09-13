@@ -325,17 +325,17 @@ last modified: 13/9/25
     cursor: pointer;
 }
 
-input:focus {
+#wrapper input:focus {
     outline: 0.2em dashed var(--main-blue);
 }
 
 /* Validation styling - radio/checkbox inputs have their own custom styling */
-input:not([type="checkbox"], [type="radio"]):valid, select:valid {
+#wrapper input:not([type="checkbox"], [type="radio"]):valid, select:valid {
     border: 2px solid #a3db40;
     background-color: #f2f5ed;
 }
 
-input:not([type="checkbox"], [type="radio"]):invalid, select:invalid {
+#wrapper input:not([type="checkbox"], [type="radio"]):invalid, select:invalid {
     border: 2px solid #eb8188;
     background-color: #fcf2f0;
 }
@@ -359,7 +359,7 @@ credit: Stephanie Eckles
     gap: 1em; /* space between the checkbox and label*/
 }
 
-input[type="checkbox"], input[type="radio"] {
+.checkbox_container input[type="checkbox"], .radio_container input[type="radio"] {
     -webkit-appearance: none; /* supports Chrome, Safari, Opera */
     appearance: none; /* supports Mozilla Firefox */
     margin: 0;
@@ -376,11 +376,11 @@ input[type="checkbox"], input[type="radio"] {
 
 }
 
-input[type="checkbox"] {
+.checkbox_container input[type="checkbox"] {
     border-radius: 0.3em;
 }
 
-input[type="radio"] {
+.radio_container input[type="radio"] {
     border-radius: 50%;
 }
 
@@ -392,7 +392,7 @@ input[type="radio"] {
     margin-bottom: 1em;
 }
 
-input[type="checkbox"]::before, input[type="radio"]::before {
+.checkbox_container input[type="checkbox"]::before, .radio_container input[type="radio"]::before {
     content: "";
     width: 0.7em;
     height: 0.7em;
@@ -402,15 +402,15 @@ input[type="checkbox"]::before, input[type="radio"]::before {
     background-color: CanvasText; /* Windows High Contrast Mode */
 }
 
-input[type="radio"]::before {
+.radio_container [type="radio"]::before {
     border-radius: 50%;
 }
 
-input[type="checkbox"]::before {
+.checkbox_container [type="checkbox"]::before {
     border-radius: 0.15em;
 }
 
-input[type="checkbox"]:checked::before, input[type="radio"]:checked::before { /* show the pseudo-element attached to checkbox/radio button when it is checked */
+.checkbox_container input[type="checkbox"]:checked::before, .radio_container input[type="radio"]:checked::before { /* show the pseudo-element attached to checkbox/radio button when it is checked */
     transform: scale(1)
 }
 
