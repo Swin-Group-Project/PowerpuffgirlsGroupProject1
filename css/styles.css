@@ -59,15 +59,15 @@ description:
 body {
     margin: 0;
     height: 100vh; /*makes the body take up the full height of the viewport*/
-    width: 100vw; /*makes the body take up the full width of the viewport*/
     background: black;
-    overflow: hidden; /*hides any overflow*/
     z-index: -20; /*makes sure the background is behind all other elements*/
 }
 
 body::before { /*::before to make another layer in the body section*/
     content: ""; /*necessary for the ::before to work*/
-    position: absolute; /*makes the position absolute so that it can be positioned anywhere*/
+    overflow: hidden; /*hides any overflow*/
+    position: fixed;
+
     inset: 0; /*blobs wouldnt show unless i did this*/
     background-image: /* creates the blobs using radial gradients*/
         radial-gradient(at 20% 20%, #4361ee, transparent 40%),
