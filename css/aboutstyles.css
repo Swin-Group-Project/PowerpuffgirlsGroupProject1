@@ -1,34 +1,32 @@
-/*
-filename: About Us
-author: Lira
-created: Aug 30 2025
-last modified: September 7 2025
-description: [html files it refers to (if known)]
+/* BACKGROUND KEYFRAME ANIMATION
+author: Aron Winjoto
+created: 
+last modified: 
+description: 
 */
-
 body {
     margin: 0;
-    /* removing this as it cuts off the other half section height: 100vh; */ /*makes the body take up the full height of the viewport*/
-    min-height: 100vh; /* allow body to grow beyond 1 screen */
-    width: 100vw; /*makes the body take up the full width of the viewport*/
+    height: 100vh; /*makes the body take up the full height of the viewport*/
     background: black;
-    /*overflow: hidden;*/ /*hides any overflow*/
-    overflow-x: hidden; /* only hide horizontal scroll, keep vertical */
+    overflow-y: auto;
+    overflow-x: hidden; /*prevents horizontal scrolling*/
     z-index: -20; /*makes sure the background is behind all other elements*/
 }
 
 body::before { /*::before to make another layer in the body section*/
     content: ""; /*necessary for the ::before to work*/
-    position: absolute; /*makes the position absolute so that it can be positioned anywhere*/
-    inset: 0; /*blobs wouldnt show unless i did this*/
-    background-image: /* creates the blobs using radial gradients*/
+    position: fixed; /*makes the background stay in place when scrolling*/ 
+    width:100%; /*makes the background take up the full width of the viewport*/
+    height:100%; /*makes the background take up the full height of the viewport*/
+       background-image: /* creates the blobs using radial gradients*/
         radial-gradient(at 20% 20%, #4361ee, transparent 40%),
         radial-gradient(at 80% 60%, #4cc9f0, transparent 40%),
         radial-gradient(at 50% 80%, #7209b7, transparent 40%),
         radial-gradient(at 80% 25%, #f72585, transparent 40%);
     animation: moveBlob 20s linear infinite, Blobpulse 3s infinite alternate; /*moves and pulses the blobs*/
-    background-size: 200% 200%; /*makes the blobs bigger so that they can move around more*/
+    background-size: 200% 200%; /*makes the background bigger so that they can move around more*/
     z-index : -10; /*makes sure the background is behind all other elements*/
+    
 }
 @keyframes moveBlob { /*moves the blobs around*/
     0% {
@@ -51,14 +49,13 @@ body::before { /*::before to make another layer in the body section*/
     }
 }
 
-/* Navigation Bar Styles */
-/* RYAN: This is just a temporary layout, we will use flexbox to incorporate responsive design later */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* NAVIGATION BAR STYLES
+author: Ryan Tay
+created: 7/9/25
+last modified: 7/9/25
+description: Layout and styling for header/footer navigation menu*/
 
+/* RYAN: This is just a temporary layout, we will use flexbox to incorporate responsive design later */
 header {
     background-color: white;
 }
@@ -76,7 +73,30 @@ nav > ul > li > a {
     text-decoration: none;
 }
 
-/*nested list settings*/
+/* ABOUT PAGE STYLES
+filename: About Us
+author: Lira
+created: Aug 30 2025
+last modified: September 14 2025
+date: Aug 26 - Sep 26, 2025
+description: css for about us page
+*/
+
+/*ABOUT-SECTION IS INCLUDED IN ALL SECTIONS*/
+.about-section {
+    margin: 20px;
+    padding: 20px;
+    /* temporary fix */
+    background-color: white;
+    border-radius: 10px;
+}
+
+#meet-section p {
+    margin: 1em 0;
+}
+
+
+/*NESTED LIST SETTINGS*/
 ul {
     list-style-type: disc;  /* normal bullets for main list */
     padding-left: 20px;     /* indent main list */
@@ -87,7 +107,7 @@ ul ul {
     padding-left: 20px;      /* indent nested list further */
 }
 
-/*Team Members section overall layout*/
+/*TEAM MEMBERS SECTION OVERALL LAYOUT*/
 .members {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 columns */
@@ -95,7 +115,7 @@ ul ul {
   margin: 0 auto;  /* center horizontally */
 }
 
-/*profiles layout settings*/
+/*TEAM MEMBERS: PROFILES LAYOUT SETTINGS*/
 .member {
   position: relative;
   overflow: hidden;
@@ -167,32 +187,27 @@ ul ul {
   background-image: url("../images/aron.jpg");
 }
 
-.member:target {
-  outline: 4px solid #007BFF; /* blue border */
-  transition: outline 0.3s;
-}
-
-/*Fun facts table layout and alignment*/ 
-.fun-facts {
+/*FUN FACTS TABLE LAYOUT AND ALIGNMENT*/ 
+#fun-facts {
     margin: 0 auto;          /* centers the table */
     border-collapse: collapse; 
     text-align: center;        /* centers text in cells */
 }
 
-.fun-facts th, .fun-facts td {
+#fun-facts th, #fun-facts td {
     border: 1px solid #ccc;  
     padding: 8px 12px;
 }
 
 
-.fun-facts caption {
+#fun-facts caption {
     caption-side: top;    /* centers table caption */
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center;
 }
 
-/*group photo alignment settings*/
+/*GROUP PHOTO SETTINGS*/
 .group-photo {
     text-align: center;       /* centers image and caption */
     margin: 20px 0;
@@ -203,22 +218,10 @@ ul ul {
   width: 600px;
   border-radius: 12px;
 }
-/*group image caption alignment*/
+
 .group-photo figcaption {
   text-align: center;
   margin-top: 10px;
   font-weight: bold;
 }
 
-.about-section {
-    margin: 20px;
-    padding: 20px;
-
-    /* temporary fix */
-    background-color: white;
-    border-radius: 10px;
-}
-
-#meet-section p {
-    margin: 1em 0;
-}
