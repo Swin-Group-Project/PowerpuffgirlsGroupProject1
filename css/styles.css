@@ -261,6 +261,7 @@ last modified: 13/9/25
     max-width: 900px;
     margin: 20px auto 0px; /* Center the wrapper */
     box-shadow: 10px 10px 3px 3px rgba(0,0,0,0.3);
+    color: var(--main-dark-blue);
 }
 
 #apply_form {
@@ -329,68 +330,87 @@ input:focus {
 }
 
 /* Validation styling - radio/checkbox inputs have their own custom styling */
-input:not([type="checkbox"], [type="radio"]):valid {
+input:not([type="checkbox"], [type="radio"]):valid, select:valid {
     border: 2px solid #a3db40;
-    background-color: #deebc7;
+    background-color: #f2f5ed;
 }
 
-input:not([type="checkbox"], [type="radio"]):invalid {
-    border: 2px solid #db4d40;
-    background-color: #fae8e6;
+input:not([type="checkbox"], [type="radio"]):invalid, select:invalid {
+    border: 2px solid #eb8188;
+    background-color: #fcf2f0;
 }
 
-/* Custom checkboxes
 
-Remove default browser styling and create a checkbox of custom height, width and colour
+/* Custom radio buttons/checkboxes
+
+Remove default browser styling and create radio/checkbox buttons of custom height, width and colour
 Pseudo-element box-shadow appears when checked using the 'scale' property
 
-credit: Stephanie Eckles (https://moderncss.dev/pure-css-custom-checkbox-style/) */
+credit: Stephanie Eckles
+- https://moderncss.dev/pure-css-custom-styled-radio-buttons/
+- https://moderncss.dev/pure-css-custom-checkbox-style/
+*/
 
-.checkbox_container {
-    font-size: 1.2em;
+.checkbox_container, .radio_container {
+    font-size: 1.1em;
     margin: 0.2em 0 0.2em 1em;
     display: grid;
     grid-template-columns: 1em auto; /* checkbox: 1em | label: remaining available space */
-    gap: 1em; /* the space between the checkbox and label*/
+    gap: 1em; /* space between the checkbox and label*/
 }
 
-#skills_fieldset label:first-of-type {
-    margin-top: 1em;
-}
-
-#skills_fieldset label:last-of-type {
-    margin-bottom: 1em;
-}
-
-input[type=checkbox] {
+input[type="checkbox"], input[type="radio"] {
     -webkit-appearance: none; /* supports Chrome, Safari, Opera */
     appearance: none; /* supports Mozilla Firefox */
     margin: 0;
     background-color: #fff; /* iOS 14 or older have default gradient background styling */
     font: inherit;
     color: currentColor; /* same as parent color  */
+    border: 0.13em solid currentColor;
     width: 1.3em;
     height: 1.3em;
-    border: 0.13em solid currentColor;
-    border-radius: 0.3em;
+    transform: translateY(-0.065em); /* align label to the bottom edge of the input*/
     /* for ::before pseudo-element*/
     display: grid;
     place-content: center; 
 
 }
 
-input[type="checkbox"]::before {
+input[type="checkbox"] {
+    border-radius: 0.3em;
+}
+
+input[type="radio"] {
+    border-radius: 50%;
+}
+
+#skills_fieldset > label:first-of-type, #gender_fieldset > label:first-of-type {
+    margin-top: 1em;
+}
+
+#skills_fieldset label:last-of-type, #gender_fieldset > label:last-of-type {
+    margin-bottom: 1em;
+}
+
+input[type="checkbox"]::before, input[type="radio"]::before {
     content: "";
     width: 0.7em;
     height: 0.7em;
     transform: scale(0);
     transition: 0.1s transform ease-in-out;
     box-shadow: inset 1em 1em var(--main-dark-blue);
-    border-radius: 0.15em;
     background-color: CanvasText; /* Windows High Contrast Mode */
 }
 
-input[type="checkbox"]:checked::before {
+input[type="radio"]::before {
+    border-radius: 50%;
+}
+
+input[type="checkbox"]::before {
+    border-radius: 0.15em;
+}
+
+input[type="checkbox"]:checked::before, input[type="radio"]:checked::before { /* show the pseudo-element attached to checkbox/radio button when it is checked */
     transform: scale(1)
 }
 
