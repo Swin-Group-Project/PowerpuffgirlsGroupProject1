@@ -64,9 +64,9 @@ body {
 }
 
 body::before { /*::before to make another layer in the body section*/
-    content: ""; /*necessary for the ::before to work*/
-    overflow: hidden; /*hides any overflow*/
-    position: fixed;
+    content: ""; /* create an empty canvas */
+    overflow: hidden;
+    position: fixed; /* allows for scrolling/scaling the page without affecting the background */
 
     inset: 0; /*blobs wouldnt show unless i did this*/
     background-image: /* creates the blobs using radial gradients*/
