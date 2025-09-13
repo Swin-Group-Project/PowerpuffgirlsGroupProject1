@@ -205,12 +205,12 @@ aside.job-page {
 
 
 .material-symbols-outlined {
-  font-family: 'Material Symbols Outlined';
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 20
+    font-family: 'Material Symbols Outlined';
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 20
 }
 
 
@@ -246,7 +246,7 @@ aside.job-page {
 /* APPLY PAGE STYLES
 author: Ryan Tay
 created: 7/9/25
-last modified: 7/9/25
+last modified: 13/9/25
 */
 
 #apply_heading, #preamble {
@@ -302,7 +302,7 @@ last modified: 7/9/25
 }
 
 #button_container > input {
-    font-family: "Saira", sans-serif;
+    font-family: "Barlow", sans-serif;
     font-size: 1.1rem;
     font-weight: 500;
     display: inline-block;
