@@ -128,7 +128,7 @@ ul ul {
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 .member:hover::before {
-  opacity: 1; /* semi-transparent */
+  opacity: 0.6; /* semi-transparent */
 }
 
 .member::before {

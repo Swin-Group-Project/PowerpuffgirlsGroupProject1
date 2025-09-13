@@ -15,7 +15,8 @@ description: applies to index.html, about.html, jobs.html, apply.html
     --text-white: #fafcfc;
 
     font-family: "Barlow", sans-serif;
-    letter-spacing: -1px;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
 }
 
 * {
@@ -58,7 +59,6 @@ description:
 body {
     margin: 0;
     height: 100vh; /*makes the body take up the full height of the viewport*/
-    width: 100vw; /*makes the body take up the full width of the viewport*/
     background: black;
     overflow-y: auto;
     overflow-x: hidden; /*prevents horizontal scrolling*/
@@ -263,13 +263,10 @@ aside.job-page {
     margin-left: 20px;
 }
 
-
-
-
-/* APPLY PAGE STYLES
+/* APPLY PAGE STYLES - START
 author: Ryan Tay
 created: 7/9/25
-last modified: 7/9/25
+last modified: 13/9/25
 */
 
 #apply_heading, #preamble {
@@ -283,6 +280,7 @@ last modified: 7/9/25
     max-width: 900px;
     margin: 20px auto 0px; /* Center the wrapper */
     box-shadow: 10px 10px 3px 3px rgba(0,0,0,0.3);
+    color: var(--main-dark-blue);
 }
 
 #apply_form {
@@ -305,12 +303,12 @@ last modified: 7/9/25
     margin: 0 auto;
 }
 
-#other_skills {
+#other_skills_container {
     display: none;
     margin: 5px 0px 10px 10px;
 }
 
-#other:checked + textarea {
+#other:checked + div, #other:checked + div > * {
     display: block; /* Show the textarea when the user checks "other skills" */
 }
 
@@ -325,7 +323,7 @@ last modified: 7/9/25
 }
 
 #button_container > input {
-    font-family: "Saira", sans-serif;
+    font-family: "Barlow", sans-serif;
     font-size: 1.1rem;
     font-weight: 500;
     display: inline-block;
@@ -336,11 +334,103 @@ last modified: 7/9/25
     border-radius: 10px;
     background-color: var(--main-blue);
     color: var(--text-white);
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; /* transition box-shadow, background-color, translate position */
 }
 
 #button_container > input:hover {
     box-shadow: 4px 4px rgba(0,0,0,0.5);
     background-color: var(--main-dark-blue);
     transform: translate(-3px, -2px);
+    cursor: pointer;
 }
+
+input:focus {
+    outline: 0.2em dashed var(--main-blue);
+}
+
+/* Validation styling - radio/checkbox inputs have their own custom styling */
+input:not([type="checkbox"], [type="radio"]):valid, select:valid {
+    border: 2px solid #a3db40;
+    background-color: #f2f5ed;
+}
+
+input:not([type="checkbox"], [type="radio"]):invalid, select:invalid {
+    border: 2px solid #eb8188;
+    background-color: #fcf2f0;
+}
+
+
+/* Custom radio buttons/checkboxes
+
+Remove default browser styling and create radio/checkbox buttons of custom height, width and colour
+Pseudo-element box-shadow appears when checked using the 'scale' property
+
+credit: Stephanie Eckles
+- https://moderncss.dev/pure-css-custom-styled-radio-buttons/
+- https://moderncss.dev/pure-css-custom-checkbox-style/
+*/
+
+.checkbox_container, .radio_container {
+    font-size: 1.1em;
+    margin: 0.2em 0 0.2em 1em;
+    display: grid;
+    grid-template-columns: 1em auto; /* checkbox: 1em | label: remaining available space */
+    gap: 1em; /* space between the checkbox and label*/
+}
+
+input[type="checkbox"], input[type="radio"] {
+    -webkit-appearance: none; /* supports Chrome, Safari, Opera */
+    appearance: none; /* supports Mozilla Firefox */
+    margin: 0;
+    background-color: #fff; /* iOS 14 or older have default gradient background styling */
+    font: inherit;
+    color: currentColor; /* same as parent color  */
+    border: 0.13em solid currentColor;
+    width: 1.3em;
+    height: 1.3em;
+    transform: translateY(-0.065em); /* align label to the bottom edge of the input*/
+    /* for ::before pseudo-element*/
+    display: grid;
+    place-content: center; 
+
+}
+
+input[type="checkbox"] {
+    border-radius: 0.3em;
+}
+
+input[type="radio"] {
+    border-radius: 50%;
+}
+
+#skills_fieldset > label:first-of-type, #gender_fieldset > label:first-of-type {
+    margin-top: 1em;
+}
+
+#skills_fieldset label:last-of-type, #gender_fieldset > label:last-of-type {
+    margin-bottom: 1em;
+}
+
+input[type="checkbox"]::before, input[type="radio"]::before {
+    content: "";
+    width: 0.7em;
+    height: 0.7em;
+    transform: scale(0);
+    transition: 0.1s transform ease-in-out;
+    box-shadow: inset 1em 1em var(--main-dark-blue);
+    background-color: CanvasText; /* Windows High Contrast Mode */
+}
+
+input[type="radio"]::before {
+    border-radius: 50%;
+}
+
+input[type="checkbox"]::before {
+    border-radius: 0.15em;
+}
+
+input[type="checkbox"]:checked::before, input[type="radio"]:checked::before { /* show the pseudo-element attached to checkbox/radio button when it is checked */
+    transform: scale(1)
+}
+
+/* APPLY PAGE STYLES - END */
