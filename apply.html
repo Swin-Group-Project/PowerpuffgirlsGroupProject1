@@ -39,25 +39,25 @@ Author: Ryan Tay
                 <form id="apply_form" action="https://mercury.swin.edu.au/it000000/formtest.php" method="post"> <!-- 'post' method used for submitting user form data -->
                     
                     <div id="job_reference_num_container" class="flex_item">
-                        <label for="job_reference_num">Job Reference Number:</label>
+                        <label for="job_reference_num">Job Reference No: <span class="red_text">*</span></label>
                         <input id="job_reference_num" name="job_reference_num" type="text" pattern="[a-zA-Z0-9]{5}" required>
                     </div>
                     
                     <div id="first_name_container"   class="flex_item">
-                        <label for="first_name">First Name:</label>
+                        <label for="first_name">First Name: <span class="red_text">*</span></label>
                         <input id="first_name" name="first_name" type="text" pattern="[a-zA-Z]{1,20}" required>
                     </div>
                     <div id="last_name_container" class="flex_item">
-                        <label for="last_name">Last Name:</label>
+                        <label for="last_name">Last Name: <span class="red_text">*</span></label>
                         <input id="last_name" name="last_name" type="text" pattern="[a-zA-Z]{1,20}" required>
                     </div>
                     <div id="date_of_birth_container" class="flex_item">
-                        <label for="date_of_birth">Date of Birth:</label>
+                        <label for="date_of_birth">Date of Birth: <span class="red_text">*</span></label>
                         <input id="date_of_birth" name="date_of_birth" type="text" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[012])/\d{4}" placeholder="dd/mm/yyyy" required>
                     </div>
                     
                     <fieldset id="gender_fieldset">
-                        <legend>Gender:</legend>
+                        <legend>Gender: <span class="red_text">*</span></legend>
                         
                         <label for="male" class="radio_container"> <!-- Nest radio buttons inside labels for accessibility (user can click label to select) -->
                             <input id="male" value="male" name="gender" type="radio" required>
@@ -74,17 +74,17 @@ Author: Ryan Tay
                     </fieldset>
                     
                     <div id="street_address_container" class="flex_item">
-                        <label for="street_address">Street Address:</label>
+                        <label for="street_address">Street Address: <span class="red_text">*</span></label>
                         <input id="street_address" name="street_address" type="text" pattern=".{1,40}" required>
                     </div>
 
                     <div id="suburb_town_container" class="flex_item">
-                        <label for="suburb_town">Suburb/Town:</label>
+                        <label for="suburb_town">Suburb/Town: <span class="red_text">*</span></label>
                         <input id="suburb_town" name="suburb_town" type="text" pattern=".{1,40}" required>
                     </div>
                     
                     <div id="state_container" class="flex_item">
-                        <label for="state">State:</label>
+                        <label for="state">State: <span class="red_text">*</span></label>
                         <select id="state" required>
                             <option value="" selected disabled>Please select</option>
                             <option value="vic">VIC</option>
@@ -99,20 +99,20 @@ Author: Ryan Tay
                     </div>
                     
                     <div id="postcode_container" class="flex_item">
-                        <label for="postcode">Postcode:</label>
+                        <label for="postcode">Postcode: <span class="red_text">*</span></label>
                         <input id="postcode" name="postcode" type="text" pattern="\d{4}" required>
                     </div>
                     <div id="email_container" class="flex_item">
-                        <label for="email">Email:</label>
+                        <label for="email">Email: <span class="red_text">*</span></label>
                         <input id="email" name="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                     </div>
                     <div id="phone_num_container" class="flex_item">
-                        <label for="phone_num">Phone Number:</label>
+                        <label for="phone_num">Phone Number: <span class="red_text">*</span></label>
                         <input id="phone_num" name="phone_num" type="text" pattern="[0-9]{8,12}" required>
                     </div>
 
                     <fieldset id="skills_fieldset">
-                        <legend>Skills:</legend>
+                        <legend>Skills: <span class="red_text">*</span></legend>
                         <label for="project_management" class="checkbox_container">
                             <input id="project_management" value="project_management" name="skills[]" type="checkbox" required>
                             Project Management

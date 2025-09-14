@@ -348,13 +348,21 @@ last modified: 13/9/25
     outline: 0.2em dashed var(--main-blue);
 }
 
+.red_text {
+    color: red;
+}
+
+legend {
+    padding: 0 0.3em;
+}
+
 /* Validation styling - radio/checkbox inputs have their own custom styling */
-#wrapper input:not([type="checkbox"], [type="radio"]):valid, select:valid {
+#wrapper input[type="text"]:valid, input[type="email"]:valid, select:valid {
     border: 2px solid #a3db40;
     background-color: #f2f5ed;
 }
 
-#wrapper input:not([type="checkbox"], [type="radio"]):invalid, select:invalid {
+#wrapper input[type="text"]:invalid, input[type="email"]:invalid, select:invalid {
     border: 2px solid #eb8188;
     background-color: #fcf2f0;
 }
