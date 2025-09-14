@@ -6,6 +6,8 @@ last modified: 7/9/25
 description: applies to index.html, about.html, jobs.html, apply.html
 */
 
+/* GLOBAL STYLES */
+
 :root{
     color: rgb(0, 0, 0); /*text color*/
 
@@ -24,6 +26,10 @@ description: applies to index.html, about.html, jobs.html, apply.html
     box-sizing: border-box; /* width/height will now include border */
     margin: 0;
     padding: 0;
+}
+
+input, textarea, select {
+    font-family: "Barlow", sans-serif;
 }
 
 /* NAVIGATION BAR STYLES
@@ -293,6 +299,8 @@ last modified: 13/9/25
     margin: 20px auto 0px; /* Center the wrapper */
     box-shadow: 10px 10px 3px 3px rgba(0,0,0,0.3);
     color: var(--main-dark-blue);
+    font-size: 1.1rem;
+    font-weight: 500;
 }
 
 #apply_form {
@@ -307,6 +315,11 @@ last modified: 13/9/25
     padding: 10px;
     display: flex;
     justify-content: space-between;
+}
+
+.flex_item input {
+    font-size: 0.8em;
+    padding-left: 0.5em;
 }
 
 #gender_fieldset, #skills_fieldset {
@@ -391,7 +404,6 @@ credit: Stephanie Eckles
 */
 
 .checkbox_container, .radio_container {
-    font-size: 1.1em;
     margin: 0.2em 0 0.2em 1em;
     display: grid;
     grid-template-columns: 1em auto; /* checkbox: 1em | label: remaining available space */
