@@ -576,6 +576,7 @@ ul ul {
 .group-photo img {
   margin: 0 auto;           /* centers the image */
   width: 600px;
+  border: 2px solid #000;  
   border-radius: 12px;
 }
 
