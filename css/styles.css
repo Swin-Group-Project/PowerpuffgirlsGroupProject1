@@ -603,7 +603,6 @@ ul ul {
 
 /*END OF ABOUT PAGE*/
 
-    
 /*index*/
 /* Small tagline text under the brand */
 .tagline { margin: 6px 0 12px; color: #555; font-size: 0.95rem; }
@@ -626,13 +625,12 @@ nav a[aria-current="page"] { font-weight: bold; }
 
 .tiles {
   display: grid;
-  grid-template-columns: 3fr 1.2fr;  /* left wider, right narrower */
+  grid-template-columns: 2fr 1.2fr;  /* left wider, right narrower */
   grid-template-rows: auto auto;
   gap: 16px;
   grid-template-areas:
     "home jobs"
-    "home apply"
-    "home about";
+    "home apply";
 }
 
 /* Reusable tile styling: make <a> look like a card */
@@ -663,8 +661,6 @@ nav a[aria-current="page"] { font-weight: bold; }
 .tile-home  { grid-area: home;  background: #2b49c2; color: #000000; }
 .tile-jobs  { grid-area: jobs;  background: #e8eaee; }
 .tile-apply { grid-area: apply; background: #c8ff3d; }
-.tile-about { grid-area: about; background: #fff; }
-
 
 /* ===== Footer ===== */
 footer {
@@ -674,7 +670,6 @@ footer {
   padding: 12px;
 }
 footer a { color: #0366d6; text-decoration: none; }
-
 
 
 
