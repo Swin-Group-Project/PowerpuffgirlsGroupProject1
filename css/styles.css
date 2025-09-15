@@ -195,6 +195,8 @@ aside.job-page {
     margin: auto;
     border-left-style: double;
     border-left-color: grey;
+    overflow-y: auto;
+    height: 100vh;
 }
 
 .company, .location {
@@ -236,6 +238,7 @@ aside.job-page {
     padding-bottom:2px;
     border-radius: 3px;
     transition: all 0.5s ease;
+    margin-bottom: 5px;
 }
 
 .job-list:hover .salary { /*makes color consistent when you hover over the job listing*/
@@ -260,6 +263,10 @@ aside.job-page {
 }
 
 .job-summary-list {
+    margin-left: 20px;
+}
+
+.job-description-list {
     margin-left: 20px;
 }
 
@@ -595,3 +602,25 @@ ul ul {
 }
 
 /*END OF ABOUT PAGE*/
+
+
+/* CREDITS */
+/*
+ARON WINJOTO
+Google fonts and icons taken from fonts.google.com
+jobs.html layout inspiration from the jora job official website https://au.jora.com/jobs
+Learnt keyframe background animation from ChatGPT
+Learnt to make separate aside scroller from ChatGPT
+Learnt to make ~ for interactive job listings from ChatGPT
+Jobs description and requirements are from ChatGPT
+
+RYAN TAY
+
+
+LIRA KHISHA
+
+
+VENSON
+*/
+
+/*No code was directly copied from GenAI, all code was created by users and GenAI was only used as a guide*/
