@@ -454,7 +454,7 @@ credit: Stephanie Eckles
 author: Lira Khisha
 date: Aug 26 - Sep 26, 2025
 created: Aug 30 2025
-last modified: September 14 2025
+last modified: September 16 2025
 */
 
 /*ABOUT-SECTION IS INCLUDED IN ALL SECTIONS*/
@@ -602,6 +602,37 @@ ul ul {
 }
 
 /*END OF ABOUT PAGE*/
+
+/*FOOTER [testing]
+author: lira
+date: 16 sep 2025
+*/
+
+footer {
+  background: #f5f5f5;  /*author: venson*/
+  border-top: 1px solid #e0e0e0; /*author: venson*/
+  padding: 0 16px; /*changed initial value first authored by venson*/
+  display: flex;
+  justify-content: space-between; /* pushes text left, logo right */
+  align-items: center;
+  font-size: 16px;        /* match header link text size */
+  height: 100px;           /* same height as header (approx) */
+}
+
+footer a { 
+  color: #0366d6; /*author: venson*/
+  text-decoration: none; /*author: venson*/
+  margin: 0 5px;            /* spacing between links like nav */
+}
+
+.footer-content {
+  text-align: left;  /* keeps text aligned neatly */
+}
+.footer-logo img {
+ 
+   width: 100px;    /* control logo size */
+  height: auto;   /* keep proportions */
+}
 
 
 /* CREDITS */
