@@ -195,8 +195,8 @@ aside.job-page {
     margin: auto;
     border-left-style: double;
     border-left-color: grey;
-    overflow-y: auto;
-    height: 100vh;
+    overflow-y: auto; /*makes it so that the job listings can be scrolled through*/
+    height: 100vh; /*makes it so that the job listings take up the full height of the viewport*/ 
 }
 
 .company, .location {
@@ -266,8 +266,13 @@ aside.job-page {
     margin-left: 20px;
 }
 
-.job-description-list {
+.job-detail-ordered-list {
     margin-left: 20px;
+}
+
+.job-detail-list {
+    list-style-type: none;
+    margin-left: -20px;
 }
 
 /* APPLY PAGE STYLES - START
@@ -612,7 +617,7 @@ jobs.html layout inspiration from the jora job official website https://au.jora.
 Learnt keyframe background animation from ChatGPT
 Learnt to make separate aside scroller from ChatGPT
 Learnt to make ~ for interactive job listings from ChatGPT
-Jobs description and requirements are from ChatGPT
+Jobs description and requirements are from ChatGPT and the VSCode auto complete function
 
 RYAN TAY
 
