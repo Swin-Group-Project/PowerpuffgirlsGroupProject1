@@ -563,7 +563,7 @@ ul ul {
 }
 
 /*FUN FACTS TABLE LAYOUT AND ALIGNMENT*/ 
-#fun-facts {
+#fun-facts table{
     margin: 0 auto;          /* centers the table */
     border-collapse: collapse; 
     text-align: center;        /* centers text in cells */
