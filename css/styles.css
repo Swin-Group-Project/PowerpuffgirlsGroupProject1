@@ -459,11 +459,10 @@ last modified: September 16 2025
 
 /*ABOUT-SECTION IS INCLUDED IN ALL SECTIONS*/
 .about-section {
-    margin: 0px;
+    margin: 35px;
     padding: 20px;
     /* temporary fix */
-    color: white;
-    background-color: var(--main-white);
+    background-color: white;
     border-radius: 10px;
 }
 
