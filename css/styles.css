@@ -618,10 +618,11 @@ footer {
   border-top: 1px solid #e0e0e0; /*author: venson*/
   padding: 0 16px; /*changed initial value first authored by venson*/
   display: flex;
-  justify-content: space-between; /* pushes text left, logo right */
+  justify-content: center; /* center main content */
   align-items: center;
   font-size: 16px;        /* match header link text size */
   height: 100px;           /* same height as header (approx) */
+  position: relative;    /* allow absolute positioning inside */
 }
 
 footer a { 
@@ -631,10 +632,15 @@ footer a {
 }
 
 .footer-content {
-  text-align: left;  /* keeps text aligned neatly */
+  text-align: center;  /* keeps text aligned neatly */
 }
+
+.footer-logo {
+  position: absolute;
+  right: 16px;         /* stick logo to the right */
+}
+
 .footer-logo img {
- 
    width: 100px;    /* control logo size */
   height: auto;   /* keep proportions */
 }
