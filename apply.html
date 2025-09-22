@@ -16,7 +16,7 @@ Author: Ryan Tay
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Establish a connection with google API -->
         <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> <!-- load Barlow font-->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons"> <!-- Load Google icons -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=help" /> <!-- Load Google icons -->
         <title>Apply Now</title>
     </head>
     <body>
@@ -35,15 +35,21 @@ Author: Ryan Tay
         <main>
             <div id="wrapper">
                 <h1 id="apply_heading">Apply Now</h1>
-                <p id="preamble">If you're serious about becoming an honourary Powerpuff Girl, fill out the form below and we will reach out to you soon!</p>
+                <p id="preamble">If you're serious about becoming an honourary Powerpuff Girl, <strong>fill out the form below</strong> and we will reach out to you soon!</p>
                 <form id="apply_form" action="https://mercury.swin.edu.au/it000000/formtest.php" method="post"> <!-- 'post' method used for submitting user form data -->
                     
                     <div id="job_reference_num_container" class="flex_item">
-                        <label for="job_reference_num">Job Reference No: <span class="red_text">*</span></label>
+                        <label for="job_reference_num">Job Ref No: <span class="red_text">*</span></label>
                         <input id="job_reference_num" name="job_reference_num" type="text" pattern="[a-zA-Z0-9]{5}" required>
                     </div>
+                    <div class="flex_item help_container">
+                        <span class="material-symbols-outlined help-icon">help</span>
+                        <span class="help_hint">The 5 alphanumberic characters in the job reference code, e.g. REF-<span class="bold">SE842</span></span>
+                    </div>
                     
-                    <div id="first_name_container"   class="flex_item">
+                    <p id="job_link">You can find your <a class="bold" href="jobs.html">job reference number and other job details here.</a></p>
+                    
+                    <div id="first_name_container" class="flex_item">
                         <label for="first_name">First Name: <span class="red_text">*</span></label>
                         <input id="first_name" name="first_name" type="text" pattern="[a-zA-Z]{1,20}" required>
                     </div>
@@ -54,6 +60,11 @@ Author: Ryan Tay
                     <div id="date_of_birth_container" class="flex_item">
                         <label for="date_of_birth">Date of Birth: <span class="red_text">*</span></label>
                         <input id="date_of_birth" name="date_of_birth" type="text" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[012])/\d{4}" placeholder="dd/mm/yyyy" required>
+                    </div>
+
+                    <div class="flex_item help_container">
+                        <span class="material-symbols-outlined help-icon">help</span>
+                        <span class="help_hint">Please enter your DOB with the format: <span class="bold">dd/mm/yyyy</span></span>
                     </div>
                     
                     <fieldset id="gender_fieldset">
@@ -119,15 +130,15 @@ Author: Ryan Tay
                         </label>
                         <label for="database_management" class="checkbox_container">
                             <input id="database_management" value="database_management" name="skills[]" type="checkbox">   
-                            Database Management (SQL)          
+                            Database Management
                         </label>
                         <label for="frontend" class="checkbox_container">
                             <input id="frontend" value="frontend" name="skills[]" type="checkbox" required>
-                            Front-End Suite: HTML/CSS/JavaScript (Node.js, React.js)
+                            Front-End Development
                         </label>
                         <label for="backend" class="checkbox_container">
                             <input id="backend" value="backend" name="skills[]" type="checkbox">   
-                            Back-End Languages: C#/C++, Java, Python                
+                            Back-End Development   
                         </label>
                         <label for="lua" class="checkbox_container">
                             <input id="lua" value="lua" name="skills[]" type="checkbox">
@@ -153,11 +164,13 @@ Author: Ryan Tay
                                 <textarea id="other_skills" name="other_skills" rows="4"  cols="60" placeholder="Link to your portfolio, list any other relevant skills here..."></textarea>
                             </div>
                         </label>
+
                     </fieldset>
                     
+                    
                     <div id="button_container" class="flex_item">
-                        <input id="submit_btn" type="submit" value="Submit Form" class="flex_item">
-                        <input id="reset_btn" type="reset" value="Reset" class="flex_item">
+                        <input id="submit_btn" type="submit" value="Submit Form">
+                        <input id="reset_btn" type="reset" value="Reset">
                     </div>
                     
                 </form>
