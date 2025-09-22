@@ -781,6 +781,9 @@ credit: w3schools.com
         display: none;
     }
 
+    .checkbox_container, .radio_container {
+        margin-bottom: 1.2em;
+    }
 }
 
 /* Smaller-sized screens: Mobile phones */
@@ -812,6 +815,9 @@ credit: w3schools.com
         display: none;
     }
 
+    .checkbox_container, .radio_container {
+        margin-bottom: 1.5em;
+    }
 }
 
 /* MEDIA QUERIES - END */
@@ -835,11 +841,9 @@ Custom checkbox/radio buttons: Stephanie Eckles
 Guidance on conventionally defined media queries: w3schools.com
 - https://www.w3schools.com/css/css_rwd_mediaqueries.asp
 
-
 LIRA KHISHA
 Footer logo and Team members section layout are inspired from dribbble.com
 Meet the Team description ideas are taken from ChatGPT as a guidance
-
 
 VENSON
 */
