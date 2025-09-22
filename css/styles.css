@@ -216,13 +216,14 @@ aside.job-page {
 
 
 .material-symbols-outlined {
-  font-family: 'Material Symbols Outlined';
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 20;
+    font-family: 'Material Symbols Outlined';
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 20;
     transform: translateY(3px); /*Icons default positions are slightly higher than the text, this moves it down to align with the text*/
+    
 }
 
 
@@ -331,7 +332,16 @@ last modified: 22/9/25
 
 #other_skills_container {
     display: none;
-    margin: 5px 0px 10px 10px;
+    margin: 0 2em;
+    grid-column: 1 / -1;
+}
+
+#other_skills_container > label {
+    color: #e8515b;
+}
+
+#other_skills_container > textarea {
+    font-size: 0.9em;
 }
 
 #other:checked + div, #other:checked + div > * {
