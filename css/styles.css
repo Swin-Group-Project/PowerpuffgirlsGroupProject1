@@ -559,8 +559,8 @@ last modified: September 16 2025
 
 /*ABOUT-SECTION IS INCLUDED IN ALL SECTIONS*/
 .about-section {
-    margin: 35px;
-    padding: 20px;
+    margin: 50px;
+    padding: 30px;
     /* temporary fix */
     background-color: white;
     border-radius: 10px;
@@ -821,7 +821,8 @@ RYAN TAY
 
 
 LIRA KHISHA
-
+Footer logo and Team members section layout are inspired from dribbble.com
+Meet the Team description ideas are taken from ChatGPT as a guidance
 
 VENSON
 */
