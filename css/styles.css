@@ -356,7 +356,6 @@ last modified: 22/9/25
 }
 
 #job_link a {
-    text-decoration: none;
     color: var(--main-dark-blue);
     transition: text-shadow 0.15s ease-in-out;
 }
@@ -374,7 +373,7 @@ last modified: 22/9/25
     align-items: center;
 }
 
-.flex_item input {
+.flex_item input, .flex_item select {
     font-size: 1em;
     margin-left: 0.2em;
 }
@@ -477,6 +476,12 @@ credit: Stephanie Eckles
     gap: 1em; /* space between the checkbox and label*/
 }
 
+.checkbox_container:hover, .radio_container:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
 .checkbox_container input[type="checkbox"], .radio_container input[type="radio"] {
     -webkit-appearance: none; /* supports Chrome, Safari, Opera */
     appearance: none; /* supports Mozilla Firefox */
@@ -487,7 +492,7 @@ credit: Stephanie Eckles
     border: 0.13em solid currentColor;
     width: 1.3em;
     height: 1.3em;
-    transform: translateY(-0.065em); /* align label to the bottom edge of the input*/
+    transform: translateY(0.065em); /* align label to the bottom edge of the input*/
     /* for ::before pseudo-element*/
     display: grid;
     place-content: center; 
