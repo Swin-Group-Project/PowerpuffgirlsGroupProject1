@@ -40,7 +40,7 @@ description: Layout and styling for header/footer navigation menu*/
 
 /* RYAN: This is just a temporary layout, we will use flexbox to incorporate responsive design later */
 header {
-    background-color: white;
+    background-color: rgb(92, 151, 218);
 }
 
 nav > img, nav > ul {
@@ -54,6 +54,16 @@ nav > ul > li {
 
 nav > ul > li > a {
     text-decoration: none;
+    color: black;
+    margin:30px;
+    font-size: 24px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav > ul > li > a:hover {
+    border-bottom: 2px solid rgb(4, 0, 132);
+    font-size: 30px;
+    transition: all 0.3s ease-in-out;
 }
 
 /* BACKGROUND KEYFRAME ANIMATION
@@ -818,11 +828,18 @@ Learnt to make ~ for interactive job listings from ChatGPT
 Jobs description and requirements are from ChatGPT and the VSCode auto complete function
 
 RYAN TAY
+Custom checkbox/radio buttons: Stephanie Eckles
+- https://moderncss.dev/pure-css-custom-styled-radio-buttons/
+- https://moderncss.dev/pure-css-custom-checkbox-style/
+
+Guidance on conventionally defined media queries: w3schools.com
+- https://www.w3schools.com/css/css_rwd_mediaqueries.asp
 
 
 LIRA KHISHA
 Footer logo and Team members section layout are inspired from dribbble.com
 Meet the Team description ideas are taken from ChatGPT as a guidance
+
 
 VENSON
 */
