@@ -771,6 +771,11 @@ credit: w3schools.com
         display: none;
     }
 
+    .checkbox_container, .radio_container {
+        margin-bottom: 1.2em;
+    }
+
+
 }
 
 /* Smaller-sized screens: Mobile phones */
@@ -802,6 +807,11 @@ credit: w3schools.com
         display: none;
     }
 
+    .checkbox_container, .radio_container {
+        margin-bottom: 1.5em;
+    }
+
+
 }
 
 /* MEDIA QUERIES - END */
@@ -818,7 +828,12 @@ Learnt to make ~ for interactive job listings from ChatGPT
 Jobs description and requirements are from ChatGPT and the VSCode auto complete function
 
 RYAN TAY
+Custom checkbox/radio buttons: Stephanie Eckles
+- https://moderncss.dev/pure-css-custom-styled-radio-buttons/
+- https://moderncss.dev/pure-css-custom-checkbox-style/
 
+Guidance on conventionally defined media queries: w3schools.com
+- https://www.w3schools.com/css/css_rwd_mediaqueries.asp
 
 LIRA KHISHA
 Footer logo and Team members section layout are inspired from dribbble.com
