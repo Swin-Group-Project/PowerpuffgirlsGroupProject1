@@ -258,7 +258,7 @@ input.jobpage {
     height: fit-content;
 }
 
-.container {
+.container_jobs {
     display: flex;
     /*makes the container a flexbox*/
     flex-direction: row;
