@@ -358,17 +358,18 @@ last modified: 22/9/25
 
 #apply_heading,
 #preamble {
-    color: var(--secondary-white);
+    color: var(--main-white);
     text-align: center;
 }
 
 #wrapper {
-    background-color: var(--main-dark-blue);
+    background-color: rgba(0,0,0,0.4);
+    backdrop-filter: grayscale(20%);
     width: 90%;
     max-width: 900px;
     margin: 3em auto;
     /* Center the wrapper */
-    box-shadow: 10px 10px 3px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 0.5em 0.6em rgba(255,255,255, 0.3);
     color: var(--main-black);
     font-size: 1.1rem;
     font-weight: 500;
@@ -527,7 +528,7 @@ last modified: 22/9/25
 }
 
 .red_text {
-    color: red;
+    color: var(--dark-red);
 }
 
 legend {
