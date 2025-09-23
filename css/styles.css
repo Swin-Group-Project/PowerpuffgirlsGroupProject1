@@ -773,6 +773,8 @@ nav a[aria-current="page"] { font-weight: bold; }
 .tile-home  { grid-area: home;  background: #2b49c2; color: #000000; }
 .tile-jobs  { grid-area: jobs;  background: #e8eaee; }
 .tile-apply { grid-area: apply; background: #c8ff3d; }
+.tile-about  { grid-area: about;  background: #e0e0e0; }
+
 
 /*END OF INDEX PAGE*/
     
