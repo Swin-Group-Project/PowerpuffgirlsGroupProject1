@@ -1046,7 +1046,35 @@ credit: w3schools.com
     .radio_container {
         margin-bottom: 1.5em;
     }
+
+
+
+    aside.job-page {
+        display: none;
+        /*hides the aside section on small screens*/
+    }
+    .detail {
+        display: block;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 30px;
+        border-radius: 15px;
+        /*makes it so that the corners are rounded*/
+        background-color: rgb(255, 255, 255);
+        box-shadow: 8px 8px 15px #000000, -4px -4px 7px #668899;
+        /*creates a shadow around the box*/
+        width: fit-content;
+        height: fit-content;
+    }
+
+    .job-detail {
+        all: revert;
+    }
+
 }
+
+
 
 
 
