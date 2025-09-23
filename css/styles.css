@@ -830,28 +830,6 @@ ul ul {
     font-size: 0.95rem;
 }
 
-/* Simple horizontal menu using inline list items */
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav li {
-    display: inline;
-    margin-right: 12px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #0366d6;
-}
-
-/* Highlight the current page link */
-nav a[aria-current="page"] {
-    font-weight: bold;
-}
-
 /* Page content width (centered) */
 .container {
     width: 90%;
