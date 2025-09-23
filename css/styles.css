@@ -713,6 +713,69 @@ ul ul {
 
 /*END OF ABOUT PAGE*/
 
+/*INDEX STYLES
+    author: venson
+    */
+    /* Small tagline text under the brand */
+.tagline { margin: 6px 0 12px; color: #555; font-size: 0.95rem; }
+
+/* Simple horizontal menu using inline list items */
+nav ul { list-style: none; margin: 0; padding: 0; }
+nav li { display: inline; margin-right: 12px; }
+nav a { text-decoration: none; color: #0366d6; }
+/* Highlight the current page link */
+nav a[aria-current="page"] { font-weight: bold; }
+
+/* Page content width (centered) */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 0 32px;
+}
+
+
+.tiles {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;  /* left wider, right narrower */
+  grid-template-rows: auto auto;
+  gap: 16px;
+  grid-template-areas:
+    "home jobs"
+    "home apply";
+}
+
+/* Reusable tile styling: make <a> look like a card */
+.tile {
+  display: block;                 /* block-level link behaves like a card */
+  padding: 20px;
+  border-radius: 16px;
+  text-decoration: none;
+  color: inherit;
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(17, 17, 2, 0.12);
+}
+
+/* Small uppercase label at the top of each tile */
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #666;
+  margin: 0 0 4px;
+}
+
+/* Tile title and body text */
+.tile h3 { margin: 4px 0 6px; font-size: 28px; }
+.tile-text { margin: 0; color: #000000; }
+
+/* Individual tile areas and simple colors (to match the mockup) */
+.tile-home  { grid-area: home;  background: #2b49c2; color: #000000; }
+.tile-jobs  { grid-area: jobs;  background: #e8eaee; }
+.tile-apply { grid-area: apply; background: #c8ff3d; }
+
+/*END OF INDEX PAGE*/
+    
 /*FOOTER [testing]
 author: lira
 date: 16 sep 2025
