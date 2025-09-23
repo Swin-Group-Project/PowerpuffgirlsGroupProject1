@@ -899,6 +899,8 @@ ul ul {
     color: #000000;
 }
 
+.tile-home:hover
+
 .tile-jobs {
     grid-area: jobs;
     background: #e8eaee;
