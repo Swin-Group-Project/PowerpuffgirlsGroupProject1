@@ -45,6 +45,12 @@ description: Layout and styling for header/footer navigation menu*/
 /* RYAN: This is just a temporary layout, we will use flexbox to incorporate responsive design later */
 header {
     background-color: rgb(92, 151, 218);
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
 }
 
 nav>img,
