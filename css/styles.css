@@ -836,10 +836,19 @@ ul ul {
 
 #about {
     width: 100%;
+    color: white;
     padding: 2em;
     margin-bottom: 3em;
     border-radius: 15px;
-    background-color: white;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: grayscale(70%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#about:hover {
+  box-shadow: 0 0 15px rgba(0, 200, 255, 0.7);
+  transform: translateY(-5px);
+  transition: 0.3s ease;
 }
 
 
