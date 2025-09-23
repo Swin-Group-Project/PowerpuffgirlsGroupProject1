@@ -8,8 +8,9 @@ description: applies to index.html, about.html, jobs.html, apply.html
 
 /* GLOBAL STYLES */
 
-:root{
-    color: rgb(0, 0, 0); /*text color*/
+:root {
+    color: rgb(0, 0, 0);
+    /*text color*/
 
     --main-blue: #5575a6;
     --main-dark-blue: #232d3d;
@@ -23,12 +24,15 @@ description: applies to index.html, about.html, jobs.html, apply.html
 
 * {
     /* Simple CSS reset for consistency across different browsers */
-    box-sizing: border-box; /* width/height will now include border */
+    box-sizing: border-box;
+    /* width/height will now include border */
     margin: 0;
     padding: 0;
 }
 
-input, textarea, select {
+input,
+textarea,
+select {
     font-family: "Barlow", sans-serif;
 }
 
@@ -43,24 +47,25 @@ header {
     background-color: rgb(92, 151, 218);
 }
 
-nav > img, nav > ul {
+nav>img,
+nav>ul {
     display: inline-block;
 }
 
-nav > ul > li {
+nav>ul>li {
     list-style: none;
     display: inline-block;
 }
 
-nav > ul > li > a {
+nav>ul>li>a {
     text-decoration: none;
     color: black;
-    margin:30px;
+    margin: 30px;
     font-size: 24px;
     transition: all 0.3s ease-in-out;
 }
 
-nav > ul > li > a:hover {
+nav>ul>li>a:hover {
     border-bottom: 2px solid rgb(4, 0, 132);
     font-size: 30px;
     transition: all 0.3s ease-in-out;
@@ -74,44 +79,64 @@ description:
 */
 body {
     margin: 0;
-    height: 100vh; /*makes the body take up the full height of the viewport*/
+    height: 100vh;
+    /*makes the body take up the full height of the viewport*/
     background: black;
     overflow-y: auto;
-    overflow-x: hidden; /*prevents horizontal scrolling*/
-    z-index: -20; /*makes sure the background is behind all other elements*/
+    overflow-x: hidden;
+    /*prevents horizontal scrolling*/
+    z-index: -20;
+    /*makes sure the background is behind all other elements*/
 }
 
-body::before { /*::before to make another layer in the body section*/
-    content: ""; /*necessary for the ::before to work*/
-    position: fixed; /*makes the background stay in place when scrolling*/ 
-    width:100%; /*makes the background take up the full width of the viewport*/
-    height:100%; /*makes the background take up the full height of the viewport*/
-       background-image: /* creates the blobs using radial gradients*/
+body::before {
+    /*::before to make another layer in the body section*/
+    content: "";
+    /*necessary for the ::before to work*/
+    position: fixed;
+    /*makes the background stay in place when scrolling*/
+    width: 100%;
+    /*makes the background take up the full width of the viewport*/
+    height: 100%;
+    /*makes the background take up the full height of the viewport*/
+    background-image:
+        /* creates the blobs using radial gradients*/
         radial-gradient(at 20% 20%, #4361ee, transparent 40%),
         radial-gradient(at 80% 60%, #4cc9f0, transparent 40%),
         radial-gradient(at 50% 80%, #7209b7, transparent 40%),
         radial-gradient(at 80% 25%, #f72585, transparent 40%);
-    animation: moveBlob 20s linear infinite, Blobpulse 3s infinite alternate; /*moves and pulses the blobs*/
-    background-size: 200% 200%; /*makes the background bigger so that they can move around more*/
-    z-index : -10; /*makes sure the background is behind all other elements*/
-    
+    animation: moveBlob 20s linear infinite, Blobpulse 3s infinite alternate;
+    /*moves and pulses the blobs*/
+    background-size: 200% 200%;
+    /*makes the background bigger so that they can move around more*/
+    z-index: -10;
+    /*makes sure the background is behind all other elements*/
+
 }
-@keyframes moveBlob { /*moves the blobs around*/
+
+@keyframes moveBlob {
+
+    /*moves the blobs around*/
     0% {
         background-position: 0% 0%;
     }
+
     50% {
         background-position: 100% 100%;
     }
+
     100% {
         background-position: 0% 0%;
     }
 }
 
-@keyframes Blobpulse { /*makes the blobs pulse*/
+@keyframes Blobpulse {
+
+    /*makes the blobs pulse*/
     0% {
         filter: brightness(0.3);
     }
+
     100% {
         filter: brightness(1);
     }
@@ -128,12 +153,13 @@ description: jobs.html, apply.html
 .material-symbols-outlined {
     font-family: 'Material Symbols Outlined';
     font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 20;
-    transform: translateY(3px); /*Icons default positions are slightly higher than the text, this moves it down to align with the text*/
-    
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 20;
+    transform: translateY(3px);
+    /*Icons default positions are slightly higher than the text, this moves it down to align with the text*/
+
 }
 
 /* JOB PAGE STYLES
@@ -143,40 +169,51 @@ last modified: 08.09.25
 */
 
 h1.title {
-    text-align:center;
+    text-align: center;
     color: white;
-    display: block; 
+    display: block;
 }
 
 .job-list {
-    display: block; /*makes it so that each job listing is on its own line*/
+    display: block;
+    /*makes it so that each job listing is on its own line*/
     border: 0px solid rgb(23, 0, 167);
     height: fit-content;
     width: 92%;
     padding-top: -5px;
     padding-left: 10px;
     margin: 10px;
-    border-radius: 15px; /*makes it so that the corners are rounded*/
+    border-radius: 15px;
+    /*makes it so that the corners are rounded*/
     background-color: rgb(255, 255, 255);
     text-align: left;
     cursor: pointer;
-    box-shadow:  8px 8px 15px #000000, -4px -4px 7px #668899; /*creates a shadow around the box*/
-    transition: all 0.5s ease /*makes the transition smooth when hovering over the job listing*/
+    box-shadow: 8px 8px 15px #000000, -4px -4px 7px #668899;
+    /*creates a shadow around the box*/
+    transition: all 0.5s ease
+        /*makes the transition smooth when hovering over the job listing*/
 }
 
 input.jobpage {
-    display: none;/*hide the radio buttons*/
+    display: none;
+    /*hide the radio buttons*/
 }
 
 .job-list:hover {
-    background-color: rgb(204, 204, 204); /*changes background color when hovering over the job listing*/
-    box-shadow:  4px 4px 6px #000000, -4px -4px 6px #668899; /*changes the shadow when hovering over the job listing*/
-    transform: scale(1.05); /*scales the job listing up when hovering over it*/
+    background-color: rgb(204, 204, 204);
+    /*changes background color when hovering over the job listing*/
+    box-shadow: 4px 4px 6px #000000, -4px -4px 6px #668899;
+    /*changes the shadow when hovering over the job listing*/
+    transform: scale(1.05);
+    /*scales the job listing up when hovering over it*/
     transition: all 0.5s ease;
 }
+
 .job-list:active {
-    transform: scale(1); /*scales the job listing back to normal when clicking on it*/
-    transition: all 0.1s ease-out; /*makes the transition smooth when clicking on the job listing*/
+    transform: scale(1);
+    /*scales the job listing back to normal when clicking on it*/
+    transition: all 0.1s ease-out;
+    /*makes the transition smooth when clicking on the job listing*/
 }
 
 .location {
@@ -189,14 +226,16 @@ input.jobpage {
 
 .detail {
     color: rgb(0, 0, 0);
-    display: none; /*hides the job details by default*/
+    display: none;
+    /*hides the job details by default*/
 }
 
-#job1:checked ~ .job-detail #detail1,
-#job2:checked ~ .job-detail #detail2,
-#job3:checked ~ .job-detail #detail3,
-#job4:checked ~ .job-detail #detail4 {
-    display: block; /*shows the job details when the corresponding radio button is checked*/
+#job1:checked~.job-detail #detail1,
+#job2:checked~.job-detail #detail2,
+#job3:checked~.job-detail #detail3,
+#job4:checked~.job-detail #detail4 {
+    display: block;
+    /*shows the job details when the corresponding radio button is checked*/
 }
 
 .job-detail {
@@ -204,36 +243,46 @@ input.jobpage {
     margin-left: 10px;
     margin-right: 10px;
     padding: 10px;
-    border-radius: 15px; /*makes it so that the corners are rounded*/
+    border-radius: 15px;
+    /*makes it so that the corners are rounded*/
     background-color: rgb(255, 255, 255);
-    box-shadow:  8px 8px 15px #000000, -4px -4px 7px #668899; /*creates a shadow around the box*/
+    box-shadow: 8px 8px 15px #000000, -4px -4px 7px #668899;
+    /*creates a shadow around the box*/
     width: fit-content;
     height: fit-content;
 }
 
 .container {
-    display: flex; /*makes the container a flexbox*/
-    flex-direction: row; /*makes the job listings and job details side by side*/
+    display: flex;
+    /*makes the container a flexbox*/
+    flex-direction: row;
+    /*makes the job listings and job details side by side*/
 }
 
 main.job-detail {
     flex: 75%;
-    width: 75%; /*makes the job details take up more space*/
+    width: 75%;
+    /*makes the job details take up more space*/
 }
 
 aside.job-page {
-    flex-direction: column; /*makes the job listings stack on top of each other*/
-    flex: 25%; /*makes the job listings take up less space*/
-    float:right;
+    flex-direction: column;
+    /*makes the job listings stack on top of each other*/
+    flex: 25%;
+    /*makes the job listings take up less space*/
+    float: right;
     width: 25%;
     margin: auto;
     border-left-style: double;
     border-left-color: grey;
-    overflow-y: auto; /*makes it so that the job listings can be scrolled through*/
-    height: 100vh; /*makes it so that the job listings take up the full height of the viewport*/ 
+    overflow-y: auto;
+    /*makes it so that the job listings can be scrolled through*/
+    height: 100vh;
+    /*makes it so that the job listings take up the full height of the viewport*/
 }
 
-.company, .location {
+.company,
+.location {
     margin-top: 5px;
     font-size: 20px;
 }
@@ -254,18 +303,19 @@ aside.job-page {
 .salary {
     font-size: small;
     width: fit-content;
-    background-color:rgb(211, 211, 211);
-    padding-left:5px;
-    padding-right:5px;
-    padding-top:2px;
-    padding-bottom:2px;
+    background-color: rgb(211, 211, 211);
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
     border-radius: 3px;
     transition: all 0.5s ease;
     margin-bottom: 5px;
 }
 
-.job-list:hover .salary { /*makes color consistent when you hover over the job listing*/
-    background-color:#a0a0a0;
+.job-list:hover .salary {
+    /*makes color consistent when you hover over the job listing*/
+    background-color: #a0a0a0;
     transition: all 0.5s ease;
 }
 
@@ -304,7 +354,8 @@ created: 7/9/25
 last modified: 22/9/25
 */
 
-#apply_heading, #preamble {
+#apply_heading,
+#preamble {
     color: var(--text-white);
     text-align: center;
 }
@@ -313,8 +364,9 @@ last modified: 22/9/25
     background-color: var(--main-dark-blue);
     width: 90%;
     max-width: 900px;
-    margin: 3em auto; /* Center the wrapper */
-    box-shadow: 10px 10px 3px 3px rgba(0,0,0,0.3);
+    margin: 3em auto;
+    /* Center the wrapper */
+    box-shadow: 10px 10px 3px 3px rgba(0, 0, 0, 0.3);
     color: var(--main-dark-blue);
     font-size: 1.1rem;
     font-weight: 500;
@@ -327,21 +379,24 @@ last modified: 22/9/25
     flex-flow: row wrap;
 }
 
-.help-icon, .help_hint {
+.help-icon,
+.help_hint {
     color: #9ea4ad;
     transition: color 0.15s ease-in-out;
-    transform: initial; /* There is no need to shift icons 3 pixels when text is aligned in the center of the element */
+    transform: initial;
+    /* There is no need to shift icons 3 pixels when text is aligned in the center of the element */
 }
 
 .help-icon:hover {
     cursor: help;
 }
 
-.help-icon:hover ~ span {
+.help-icon:hover~span {
     opacity: 100;
 }
 
-.help-icon:hover, .help-icon:hover ~ span {
+.help-icon:hover,
+.help-icon:hover~span {
     color: var(--main-blue);
 }
 
@@ -354,10 +409,11 @@ last modified: 22/9/25
 }
 
 .bold {
-    font-weight: bold;  
+    font-weight: bold;
 }
 
-.flex_item, #job_link {
+.flex_item,
+#job_link {
     padding: 10px;
 }
 
@@ -371,7 +427,7 @@ last modified: 22/9/25
 }
 
 #job_link a:hover {
-    text-shadow: 0.2em 0.2em 0.3em rgba(0,0,0,0.5);
+    text-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.5);
 }
 
 .flex_item {
@@ -381,13 +437,15 @@ last modified: 22/9/25
     align-items: center;
 }
 
-.flex_item input, .flex_item select {
+.flex_item input,
+.flex_item select {
     width: 55%;
     font-size: 1em;
     padding: 0.15em 0.3em;
 }
 
-#gender_fieldset, #skills_fieldset {
+#gender_fieldset,
+#skills_fieldset {
     width: 97.5%;
     display: grid;
     margin: 1.4em auto;
@@ -407,11 +465,14 @@ last modified: 22/9/25
     font-size: 0.9em;
 }
 
-#other:checked + div, #other:checked + div > * {
-    display: block; /* Show the textarea when the user checks "other skills" */
+#other:checked+div,
+#other:checked+div>* {
+    display: block;
+    /* Show the textarea when the user checks "other skills" */
 }
 
-#apply_form, #wrapper {
+#apply_form,
+#wrapper {
     padding: 30px;
     border-radius: 5px;
 }
@@ -421,7 +482,7 @@ last modified: 22/9/25
     justify-content: space-evenly;
 }
 
-#button_container > input {
+#button_container>input {
     font-family: "Barlow", sans-serif;
     font-size: 1.1rem;
     font-weight: 500;
@@ -433,7 +494,8 @@ last modified: 22/9/25
     border: none;
     border-radius: 10px;
     color: var(--text-white);
-    transition: all 0.2s ease-in-out; /* transition box-shadow, background-color, translate position */
+    transition: all 0.2s ease-in-out;
+    /* transition box-shadow, background-color, translate position */
 }
 
 #submit_btn {
@@ -444,8 +506,8 @@ last modified: 22/9/25
     background-color: #e8515b;
 }
 
-#button_container > input:hover {
-    box-shadow: 4px 4px rgba(0,0,0,0.5);
+#button_container>input:hover {
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.5);
     transform: translate(-3px, -2px);
     cursor: pointer;
 }
@@ -471,12 +533,16 @@ legend {
 }
 
 /* Validation styling - radio/checkbox inputs have their own custom styling */
-#wrapper input[type="text"]:valid, input[type="email"]:valid, select:valid {
+#wrapper input[type="text"]:valid,
+input[type="email"]:valid,
+select:valid {
     border: 2px solid #a3db40;
     background-color: #f2f5ed;
 }
 
-#wrapper input[type="text"]:invalid, input[type="email"]:invalid, select:invalid {
+#wrapper input[type="text"]:invalid,
+input[type="email"]:invalid,
+select:invalid {
     border: 2px solid #eb8188;
     background-color: #fcf2f0;
 }
@@ -492,31 +558,41 @@ credit: Stephanie Eckles
 - https://moderncss.dev/pure-css-custom-checkbox-style/
 */
 
-.checkbox_container, .radio_container {
+.checkbox_container,
+.radio_container {
     margin: 0.2em 0 0.2em 1em;
     display: grid;
-    grid-template-columns: 1em auto; /* checkbox: 1em | label: remaining available space */
-    gap: 1em; /* space between the checkbox and label*/
+    grid-template-columns: 1em auto;
+    /* checkbox: 1em | label: remaining available space */
+    gap: 1em;
+    /* space between the checkbox and label*/
 }
 
-.checkbox_container:hover, .radio_container:hover {
+.checkbox_container:hover,
+.radio_container:hover {
     cursor: pointer;
 }
 
-.checkbox_container input[type="checkbox"], .radio_container input[type="radio"] {
-    -webkit-appearance: none; /* supports Chrome, Safari, Opera */
-    appearance: none; /* supports Mozilla Firefox */
+.checkbox_container input[type="checkbox"],
+.radio_container input[type="radio"] {
+    -webkit-appearance: none;
+    /* supports Chrome, Safari, Opera */
+    appearance: none;
+    /* supports Mozilla Firefox */
     margin: 0;
-    background-color: #fff; /* iOS 14 or older have default gradient background styling */
+    background-color: #fff;
+    /* iOS 14 or older have default gradient background styling */
     font: inherit;
-    color: currentColor; /* same as parent color  */
+    color: currentColor;
+    /* same as parent color  */
     border: 0.13em solid currentColor;
     width: 1.3em;
     height: 1.3em;
-    transform: translateY(0.065em); /* align label to the bottom edge of the input*/
+    transform: translateY(0.065em);
+    /* align label to the bottom edge of the input*/
     /* for ::before pseudo-element*/
     display: grid;
-    place-content: center; 
+    place-content: center;
 
 }
 
@@ -528,22 +604,26 @@ credit: Stephanie Eckles
     border-radius: 50%;
 }
 
-#skills_fieldset > label:first-of-type, #gender_fieldset > label:first-of-type {
+#skills_fieldset>label:first-of-type,
+#gender_fieldset>label:first-of-type {
     margin-top: 1em;
 }
 
-#skills_fieldset label:last-of-type, #gender_fieldset > label:last-of-type {
+#skills_fieldset label:last-of-type,
+#gender_fieldset>label:last-of-type {
     margin-bottom: 1em;
 }
 
-.checkbox_container input[type="checkbox"]::before, .radio_container input[type="radio"]::before {
+.checkbox_container input[type="checkbox"]::before,
+.radio_container input[type="radio"]::before {
     content: "";
     width: 0.7em;
     height: 0.7em;
     transform: scale(0);
     transition: 0.1s transform ease-in-out;
     box-shadow: inset 1em 1em var(--main-dark-blue);
-    background-color: CanvasText; /* Windows High Contrast Mode */
+    background-color: CanvasText;
+    /* Windows High Contrast Mode */
 }
 
 .radio_container [type="radio"]::before {
@@ -554,7 +634,9 @@ credit: Stephanie Eckles
     border-radius: 0.15em;
 }
 
-.checkbox_container input[type="checkbox"]:checked::before, .radio_container input[type="radio"]:checked::before { /* show the pseudo-element attached to checkbox/radio button when it is checked */
+.checkbox_container input[type="checkbox"]:checked::before,
+.radio_container input[type="radio"]:checked::before {
+    /* show the pseudo-element attached to checkbox/radio button when it is checked */
     transform: scale(1)
 }
 
@@ -583,42 +665,50 @@ last modified: September 16 2025
 
 /*NESTED LIST SETTINGS*/
 ul {
-    list-style-type: disc;  /* normal bullets for main list */
-    padding-left: 20px;     /* indent main list */
+    list-style-type: disc;
+    /* normal bullets for main list */
+    padding-left: 20px;
+    /* indent main list */
 }
 
 ul ul {
-    list-style-type: circle; /* different bullet for nested list */
-    padding-left: 20px;      /* indent nested list further */
+    list-style-type: circle;
+    /* different bullet for nested list */
+    padding-left: 20px;
+    /* indent nested list further */
 }
 
 /*TEAM MEMBERS SECTION OVERALL LAYOUT*/
 .members {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  gap: 20px;
-  margin: 0 auto;  /* center horizontally */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns */
+    gap: 20px;
+    margin: 0 auto;
+    /* center horizontally */
 }
 
 /*TEAM MEMBERS: PROFILES LAYOUT SETTINGS*/
 .member {
-  position: relative;
-  overflow: hidden;
-  background: #f4f4f4;
-  min-height: 300px;
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-  scroll-margin-top: 100px; /* <-- this moves the scroll-down anchor a bit lower */
+    position: relative;
+    overflow: hidden;
+    background: #f4f4f4;
+    min-height: 300px;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    scroll-margin-top: 100px;
+    /* <-- this moves the scroll-down anchor a bit lower */
 }
 
 .student-id {
-  float: right;
-  font-weight: normal;
-  color: #333;  /*to match with other text in profile section */
-  font-size: 1em;
-  background: none;
+    float: right;
+    font-weight: normal;
+    color: #333;
+    /*to match with other text in profile section */
+    font-size: 1em;
+    background: none;
 }
 
 /*optional for future grid/flexbox layout 
@@ -629,35 +719,40 @@ ul ul {
 */
 
 .member:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
+
 .member:hover::before {
-  opacity: 0.6; /* semi-transparent */
+    opacity: 0.6;
+    /* semi-transparent */
 }
 
 .member::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;     /* prevents multiple copies */
-  opacity: 0; /* hidden at first */
-  transition: opacity 0.4s ease-in-out;
-  z-index: 0; /* keeps it behind text */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* prevents multiple copies */
+    opacity: 0;
+    /* hidden at first */
+    transition: opacity 0.4s ease-in-out;
+    z-index: 0;
+    /* keeps it behind text */
 }
 
 .member * {
-  position: relative;
-  z-index: 1;
+    position: relative;
+    z-index: 1;
 }
 
 #member1::before {
-  background-image: url("../images/venson.jpg");
+    background-image: url("../images/venson.jpg");
 }
 
 #member2::before {
@@ -665,28 +760,32 @@ ul ul {
 }
 
 #member3::before {
-  background-image: url("../images/ryan.jpg");
+    background-image: url("../images/ryan.jpg");
 }
 
 #member4::before {
-  background-image: url("../images/aron.jpg");
+    background-image: url("../images/aron.jpg");
 }
 
-/*FUN FACTS TABLE LAYOUT AND ALIGNMENT*/ 
-#fun-facts table{
-    margin: 0 auto;          /* centers the table */
-    border-collapse: collapse; 
-    text-align: center;        /* centers text in cells */
+/*FUN FACTS TABLE LAYOUT AND ALIGNMENT*/
+#fun-facts table {
+    margin: 0 auto;
+    /* centers the table */
+    border-collapse: collapse;
+    text-align: center;
+    /* centers text in cells */
 }
 
-#fun-facts th, #fun-facts td {
-    border: 1px solid #ccc;  
+#fun-facts th,
+#fun-facts td {
+    border: 1px solid #ccc;
     padding: 8px 12px;
 }
 
 
 #fun-facts caption {
-    caption-side: top;    /* centers table caption */
+    caption-side: top;
+    /* centers table caption */
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center;
@@ -694,21 +793,23 @@ ul ul {
 
 /*GROUP PHOTO SETTINGS*/
 .group-photo {
-    text-align: center;       /* centers image and caption */
+    text-align: center;
+    /* centers image and caption */
     margin: 20px 0;
 }
 
 .group-photo img {
-  margin: 0 auto;           /* centers the image */
-  width: 600px;
-  border: 2px solid #000;  
-  border-radius: 12px;
+    margin: 0 auto;
+    /* centers the image */
+    width: 600px;
+    border: 2px solid #000;
+    border-radius: 12px;
 }
 
 .group-photo figcaption {
-  text-align: center;
-  margin-top: 10px;
-  font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
 }
 
 /*END OF ABOUT PAGE*/
@@ -716,103 +817,162 @@ ul ul {
 /*INDEX STYLES
     author: venson
     */
-    /* Small tagline text under the brand */
-.tagline { margin: 6px 0 12px; color: #555; font-size: 0.95rem; }
+/* Small tagline text under the brand */
+.tagline {
+    margin: 6px 0 12px;
+    color: #555;
+    font-size: 0.95rem;
+}
 
 /* Simple horizontal menu using inline list items */
-nav ul { list-style: none; margin: 0; padding: 0; }
-nav li { display: inline; margin-right: 12px; }
-nav a { text-decoration: none; color: #0366d6; }
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 12px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #0366d6;
+}
+
 /* Highlight the current page link */
-nav a[aria-current="page"] { font-weight: bold; }
+nav a[aria-current="page"] {
+    font-weight: bold;
+}
 
 /* Page content width (centered) */
 .container {
-  width: 90%;
-  max-width: 1000px;
-  margin: 0 auto 300px;
-  padding: 20px 0 32px;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto 300px;
+    padding: 20px 0 32px;
 }
 
 
 .tiles {
-  display: grid;
-  grid-template-columns: 2fr 1.2fr;  /* left wider, right narrower */
-  grid-template-rows: auto auto;
-  gap: 16px;
-  grid-template-areas:
-    "home jobs"
-    "home apply";
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* left wider, right narrower */
+    grid-template-rows: auto auto;
+    gap: 16px;
+    grid-template-areas:
+        "home jobs"
+        "home apply"
+        "home  about";
 }
 
 /* Reusable tile styling: make <a> look like a card */
 .tile {
-  display: block;                 /* block-level link behaves like a card */
-  padding: 20px;
-  border-radius: 16px;
-  text-decoration: none;
-  color: inherit;
-  background: #ffffff;
-  box-shadow: 0 8px 20px rgba(17, 17, 2, 0.12);
+    display: block;
+    /* block-level link behaves like a card */
+    padding: 20px;
+    border-radius: 16px;
+    text-decoration: none;
+    color: inherit;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(17, 17, 2, 0.12);
 }
 
 /* Small uppercase label at the top of each tile */
 .eyebrow {
-  font-size: 12px;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  color: #666;
-  margin: 0 0 4px;
+    font-size: 12px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: #666;
+    margin: 0 0 4px;
 }
 
 /* Tile title and body text */
-.tile h3 { margin: 4px 0 6px; font-size: 28px; }
-.tile-text { margin: 0; color: #000000; }
+.tile h3 {
+    margin: 4px 0 6px;
+    font-size: 28px;
+}
+
+.tile-text {
+    margin: 0;
+    color: #000000;
+}
 
 /* Individual tile areas and simple colors (to match the mockup) */
-.tile-home  { grid-area: home;  background: #2b49c2; color: #000000; }
-.tile-jobs  { grid-area: jobs;  background: #e8eaee; }
-.tile-apply { grid-area: apply; background: #c8ff3d; }
-.tile-about  { grid-area: about;  background: #e0e0e0; }
+.tile-home {
+    grid-area: home;
+    background: #2b49c2;
+    color: #000000;
+}
+
+.tile-jobs {
+    grid-area: jobs;
+    background: #e8eaee;
+}
+
+.tile-apply {
+    grid-area: apply;
+    background: #c8ff3d;
+}
+
+.tile-about {
+    grid-area: about;
+    background: #e0e0e0;
+}
 
 
 /*END OF INDEX PAGE*/
-    
+
 /*FOOTER [testing]
 author: lira
 date: 16 sep 2025
 */
 
 footer {
-  background: #f5f5f5;  /*author: venson*/
-  border-top: 1px solid #e0e0e0; /*author: venson*/
-  padding: 0 16px; /*changed initial value first authored by venson*/
-  display: flex;
-  justify-content: center; /* center main content */
-  align-items: center;
-  font-size: 16px;        /* match header link text size */
-  height: 100px;           /* same height as header (approx) */
-  position: relative;    /* allow absolute positioning inside */
+    background: #f5f5f5;
+    /*author: venson*/
+    border-top: 1px solid #e0e0e0;
+    /*author: venson*/
+    padding: 0 16px;
+    /*changed initial value first authored by venson*/
+    display: flex;
+    justify-content: center;
+    /* center main content */
+    align-items: center;
+    font-size: 16px;
+    /* match header link text size */
+    height: 100px;
+    /* same height as header (approx) */
+    position: relative;
+    /* allow absolute positioning inside */
 }
 
-footer a { 
-  color: #0366d6; /*author: venson*/
-  text-decoration: none; /*author: venson*/
-  margin: 0 5px;            /* spacing between links like nav */
+footer a {
+    color: #0366d6;
+    /*author: venson*/
+    text-decoration: none;
+    /*author: venson*/
+    margin: 0 5px;
+    /* spacing between links like nav */
 }
 
 .footer-content {
-  text-align: center;  /* keeps text aligned neatly */
+    text-align: center;
+    /* keeps text aligned neatly */
 }
 
 .footer-logo {
-  position: absolute;
-  right: 16px;         /* stick logo to the right */
+    position: absolute;
+    right: 16px;
+    /* stick logo to the right */
 }
 
 .footer-logo img {
-   width: 100px;    /* control logo size */
-  height: auto;   /* keep proportions */
+    width: 100px;
+    /* control logo size */
+    height: auto;
+    /* keep proportions */
 }
 
 /* MEDIA QUERIES - START
@@ -834,19 +994,23 @@ credit: w3schools.com
         justify-content: space-between;
     }
 
-    .flex_item, #apply_form {
+    .flex_item,
+    #apply_form {
         font-size: 1.2rem;
     }
 
-    .flex_item input, .flex_item select {
+    .flex_item input,
+    .flex_item select {
         width: 60%;
     }
 
-    .help_container, #job_link {
+    .help_container,
+    #job_link {
         display: none;
     }
 
-    .checkbox_container, .radio_container {
+    .checkbox_container,
+    .radio_container {
         margin-bottom: 1.2em;
     }
 }
@@ -861,11 +1025,13 @@ credit: w3schools.com
         width: 100%;
     }
 
-    .flex_item, #apply_form {
+    .flex_item,
+    #apply_form {
         font-size: 1.5rem;
     }
 
-    .flex_item input, .flex_item select {
+    .flex_item input,
+    .flex_item select {
         width: 100%;
     }
 
@@ -875,12 +1041,14 @@ credit: w3schools.com
         font-size: 1.2em;
     }
 
-    .help_container, #job_link {
+    .help_container,
+    #job_link {
         width: 100%;
         display: none;
     }
 
-    .checkbox_container, .radio_container {
+    .checkbox_container,
+    .radio_container {
         margin-bottom: 1.5em;
     }
 }
