@@ -12,10 +12,12 @@ description: applies to index.html, about.html, jobs.html, apply.html
     color: rgb(0, 0, 0);
     /*text color*/
 
-    --main-blue: #5575a6;
-    --main-dark-blue: #232d3d;
-    --main-white: #e6e9ed;
-    --text-white: #fafcfc;
+    --main-blue: rgb(92, 151, 218);
+    --main-dark-blue: #416194;
+    --main-black: #1a1c20;
+    --main-white: #ffffff;
+    --secondary-white: #f6faff;
+    --dark-red: #a9151e;
 
     font-family: "Barlow", sans-serif;
     letter-spacing: 0.5px;
@@ -44,7 +46,7 @@ description: Layout and styling for header/footer navigation menu*/
 
 /* RYAN: This is just a temporary layout, we will use flexbox to incorporate responsive design later */
 header {
-    background-color: rgb(92, 151, 218);
+    background-color: var(--main-blue);
     position: fixed;
     display: flex;
     align-items: center;
@@ -186,10 +188,9 @@ h1.title {
     /*makes it so that each job listing is on its own line*/
     border: 0px solid rgb(23, 0, 167);
     height: fit-content;
-    width: 92%;
     padding-top: -5px;
     padding-left: 10px;
-    margin: 10px;
+    margin: 30px 10px;
     border-radius: 15px;
     /*makes it so that the corners are rounded*/
     background-color: rgb(255, 255, 255);
@@ -206,8 +207,8 @@ input.jobpage {
     /*hide the radio buttons*/
 }
 
-.job-list:hover {
-    background-color: rgb(204, 204, 204);
+.hover-effect:hover {
+    filter: brightness(0.9);
     /*changes background color when hovering over the job listing*/
     box-shadow: 4px 4px 6px #000000, -4px -4px 6px #668899;
     /*changes the shadow when hovering over the job listing*/
@@ -246,7 +247,7 @@ input.jobpage {
 }
 
 .job-detail {
-    margin-top: 10px;
+    margin-top: 30px;
     margin-left: 10px;
     margin-right: 10px;
     padding: 10px;
@@ -320,12 +321,6 @@ aside.job-page {
     margin-bottom: 5px;
 }
 
-.job-list:hover .salary {
-    /*makes color consistent when you hover over the job listing*/
-    background-color: #a0a0a0;
-    transition: all 0.5s ease;
-}
-
 .job-footing {
     display: flex;
     justify-content: space-between;
@@ -363,7 +358,7 @@ last modified: 22/9/25
 
 #apply_heading,
 #preamble {
-    color: var(--text-white);
+    color: var(--secondary-white);
     text-align: center;
 }
 
@@ -374,7 +369,7 @@ last modified: 22/9/25
     margin: 3em auto;
     /* Center the wrapper */
     box-shadow: 10px 10px 3px 3px rgba(0, 0, 0, 0.3);
-    color: var(--main-dark-blue);
+    color: var(--main-black);
     font-size: 1.1rem;
     font-weight: 500;
 }
@@ -404,7 +399,7 @@ last modified: 22/9/25
 
 .help-icon:hover,
 .help-icon:hover~span {
-    color: var(--main-blue);
+    color: var(--main-dark-blue);
 }
 
 .help_hint {
@@ -425,7 +420,7 @@ last modified: 22/9/25
 }
 
 #job_link {
-    color: var(--main-blue);
+    color: var(--main-black);
 }
 
 #job_link a {
@@ -465,7 +460,7 @@ last modified: 22/9/25
 }
 
 #other_skills_container label {
-    color: #e8515b;
+    color: ;
 }
 
 #other_skills_container textarea {
@@ -500,7 +495,7 @@ last modified: 22/9/25
     width: 30%;
     border: none;
     border-radius: 10px;
-    color: var(--text-white);
+    color: var(--secondary-white);
     transition: all 0.2s ease-in-out;
     /* transition box-shadow, background-color, translate position */
 }
@@ -870,6 +865,7 @@ ul ul {
     color: inherit;
     background: #ffffff;
     box-shadow: 0 8px 20px rgba(17, 17, 2, 0.12);
+    transition: all 0.5s ease;
 }
 
 /* Small uppercase label at the top of each tile */
@@ -895,23 +891,20 @@ ul ul {
 /* Individual tile areas and simple colors (to match the mockup) */
 .tile-home {
     grid-area: home;
-    background: #2b49c2;
+    background: #9ed5ff;    
     color: #000000;
 }
 
 .tile-jobs {
     grid-area: jobs;
-    background: #e8eaee;
 }
 
 .tile-apply {
     grid-area: apply;
-    background: #c8ff3d;
 }
 
 .tile-about {
     grid-area: about;
-    background: #e0e0e0;
 }
 
 
@@ -1009,7 +1002,7 @@ credit: w3schools.com
 }
 
 /* Smaller-sized screens: Mobile phones */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
 
     /* Apply page */
     .flex_item {
