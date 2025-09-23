@@ -460,7 +460,7 @@ last modified: 22/9/25
 }
 
 #other_skills_container label {
-    color: ;
+    color: var(--dark-red);
 }
 
 #other_skills_container textarea {
