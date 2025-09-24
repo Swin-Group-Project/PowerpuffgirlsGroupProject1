@@ -18,11 +18,11 @@
 <body>
 
   <!-- Website header with logo and company name -->
-  <header>
-    <!-- Navbar is yet to be agreed upon with group. Must be consistent across all pages -->
-    <img src="images/powerpuff-corp-logo.png" width="100px"> <!-- RYAN: ensure you styles.css is linked on your page to see these changes -->
+  <header role="banner>
+
+    <img src="images/powerpuff-corp-logo.png" width="100px"alt="Powerpuff Corp logo"> <!-- RYAN: ensure you styles.css is linked on your page to see these changes -->
         <!-- Navbar is yet to be agreed upon with group. Must be consistent across all pages -->
-    <nav id="navbar">
+    <nav id="navbar" role="navigation" aria-label="Primary">
         
         <ul>
             <li><a href="./index.html">Home</a></li> 
@@ -35,11 +35,11 @@
   </header>
 
   <!-- Main content container -->
-  <main role="main" class="container">
+   <main id="main" role="main" class="container" tabindex="-1">
 
-    <section id="about" class="about">
 
-      <h2>About Us</h2>
+    <section id="about" class="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About Us</h2>
       <p>
         Powerpuff Corp is a Melbourne-based game studio expanding our tech team.
         We build the engine, rendering and tools that help artists and designers
@@ -49,23 +49,23 @@
     </section>
 
     <!-- Section with navigation tiles -->
-    <section class="tiles">
+    <section class="tiles" role="navigation" aria-label="Feature tiles">
       <!-- Home tile (links back to index) -->
-      <a class="tile tile-home hover-effect" href="index.html">
+        <a class="tile tile-home hover-effect" href="index.html" aria-label="Go to Home page">
         <p class="eyebrow">Welcome</p>
         <h3>Home</h3>
         <p class="tile-text">Explore Powerpuff Corp and our shared vision for the game.</p>
       </a>
 
       <!-- Jobs tile (links to jobs page) -->
-      <a class="tile tile-jobs hover-effect" href="jobs.html">
+      <a class="tile tile-jobs hover-effect" href="jobs.html" aria-label="View open jobs">
         <p class="eyebrow">We’re hiring</p>
         <h3>Jobs</h3>
         <p class="tile-text">View open positions and requirements.</p>
       </a>
 
       <!-- Apply tile (links to apply page) -->
-      <a class="tile tile-apply hover-effect" href="apply.html">
+      <a class="tile tile-apply hover-effect" href="apply.html" aria-label="Apply for a role">
         <p class="eyebrow">Join us</p>
         <h3>Apply</h3>
         <p class="tile-text">Apply by submitting your form.</p>
@@ -82,20 +82,21 @@
   </main>
 
   <!-- Footer with copyright and links -->
-  <footer>
+  <footer role="contentinfo">
     <!-- TO DO: Insert nav links; need to be styled differently to header -->
-    <div class="footer-content">
+    <nav aria-label="Footer">
+      <div class="footer-content">
       &copy; 2025 powerpuff corp ·
       <!-- Placeholder links for project management tools -->
       <a href="https://student-team-ikdwg2wc.atlassian.net/jira/software/projects/POW/boards/34?atlOrigin=eyJpIjoiN2E5OTliZmQ1MWRlNGYyZWIxYWMzYTU4N2FiZTQ4MTEiLCJwIjoiaiJ9"
-        target="_blank">Jira board</a> ·
-      <a href="https://github.com/Swin-Group-Project/PowerpuffgirlsGroupProject1.git" target="_blank">GitHub
+        target="_blank" rel="noopener">Jira board</a> ·
+      <a href="https://github.com/Swin-Group-Project/PowerpuffgirlsGroupProject1.git" target="_blank" rel="noopener">GitHub
         repository</a> ·
       <!-- Contact email -->
       Email: <a href="mailto:info@companyname.com">info@companyname.com</a>
     </div>
     <div class="footer-logo">
-      <img src="images/transparent_logo_test.png" alt="powerpuff-corp-logo-footer">
+      <img src="images/transparent_logo_test.png" alt="" aria-hidden="true"">
     </div>
   </footer>
 
@@ -103,3 +104,4 @@
 
 
 </html>
+
