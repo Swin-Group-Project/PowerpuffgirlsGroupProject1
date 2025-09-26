@@ -40,12 +40,19 @@ Author: Ryan Tay
                 <h2 id="apply_heading">Apply Now!</h2>
                 <img id="powerpuff_rodents" src="images/powerpuff-corp-logo.png" alt="Powerpuff girls with rodents photoshopped on each of their faces">
                 <p id="preamble">If you're serious about becoming an honourary Powerpuff Girl, <strong>fill out the form below</strong> and we will reach out to you soon!</p>
-                <form id="apply_form" role="form" aria-labelledby="apply_heading" action="https://mercury.swin.edu.au/it000000/formtest.php" method="post"> <!-- 'post' method used for submitting user form data -->
+                <!--    FORM STARTS HERE
+                        'post' method used for submitting user form data
+                        Regex patterns sourced from Tutor Nick:
+                        - https://arziel1992.github.io/input-pattern-tester/
+                -->
+                <form id="apply_form" role="form" aria-labelledby="apply_heading" action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
                     
                     <div id="job_reference_num_container" class="flex_item">
                         <label for="job_reference_num">Job Ref No: <span class="red_text">*</span></label>
                         <input id="job_reference_num" name="job_reference_num" type="text" pattern="[a-zA-Z0-9]{5}" required>
                     </div>
+
+                    <!-- Hoverable tooltip for job reference number -->
                     <div class="flex_item help_container">
                         <span class="material-symbols-outlined help-icon" aria-label="Show job reference number help" tabindex="0" aria-describedby="job_ref_help">help</span>
                         <span id="job_ref_help" class="help_hint" role="tooltip">The 5 alphanumberic characters in the job reference code, e.g. REF-<span class="bold">SE842</span></span>
@@ -66,6 +73,7 @@ Author: Ryan Tay
                         <input id="date_of_birth" name="date_of_birth" type="text" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[012])/\d{4}" placeholder="dd/mm/yyyy" required>
                     </div>
 
+                    <!-- Hoverable tooltip for dd/mm/yyyy format -->
                     <div class="flex_item help_container">
                         <span class="material-symbols-outlined help-icon" aria-label="Show date of birth help" tabindex="0" aria-describedby="birth_date_help">help</span>
                         <span id="birth_date_help" class="help_hint" role="tooltip">Please enter your DOB with the format: <span class="bold">dd/mm/yyyy</span></span>
@@ -101,7 +109,7 @@ Author: Ryan Tay
                     <div id="state_container" class="flex_item">
                         <label for="state">State: <span class="red_text">*</span></label>
                         <select id="state" required>
-                            <option value="" selected disabled>Please select</option>
+                            <option value="" selected disabled>Please select</option> <!--initial 'null' option-->
                             <option value="vic">VIC</option>
                             <option value="nsw">NSW</option>
                             <option value="qld">QLD</option>
@@ -119,11 +127,11 @@ Author: Ryan Tay
                     </div>
                     <div id="email_container" class="flex_item">
                         <label for="email">Email: <span class="red_text">*</span></label>
-                        <input id="email" name="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                        <input id="email" name="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required> <!-- (at least one char)@(at least 1 char).(at least 2 char)-->
                     </div>
                     <div id="phone_num_container" class="flex_item">
                         <label for="phone_num">Phone Number: <span class="red_text">*</span></label>
-                        <input id="phone_num" name="phone_num" type="text" pattern="[0-9]{8,12}" required>
+                        <input id="phone_num" name="phone_num" type="text" pattern="[0-9]{8,12}" required> <!-- phone number can be 8-12 digits -->
                     </div>
 
                     <fieldset id="skills_fieldset" role="group" aria-labelledby="skills_legend">
@@ -179,6 +187,9 @@ Author: Ryan Tay
                     </div>
                     
                 </form>
+                <!--    FORM ENDS HERE
+                        'post' method used for submitting user form data
+                -->
             </div>
         </main>
         <footer role="contentinfo" aria-label="footer"> <!--footer is authored by venson with slight changes made by lira-->
