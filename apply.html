@@ -35,20 +35,20 @@ Author: Ryan Tay
                 <p id="slogan">Sugar, spice, and games at half price</p>
             </div>
         </header>
-        <main>
+        <main role="main">
             <div id="wrapper">
                 <h2 id="apply_heading">Apply Now!</h2>
                 <img id="powerpuff_rodents" src="images/powerpuff-corp-logo.png" alt="Powerpuff girls with rodents photoshopped on each of their faces">
                 <p id="preamble">If you're serious about becoming an honourary Powerpuff Girl, <strong>fill out the form below</strong> and we will reach out to you soon!</p>
-                <form id="apply_form" action="https://mercury.swin.edu.au/it000000/formtest.php" method="post"> <!-- 'post' method used for submitting user form data -->
+                <form id="apply_form" role="form" aria-labelledby="apply_heading" action="https://mercury.swin.edu.au/it000000/formtest.php" method="post"> <!-- 'post' method used for submitting user form data -->
                     
                     <div id="job_reference_num_container" class="flex_item">
                         <label for="job_reference_num">Job Ref No: <span class="red_text">*</span></label>
                         <input id="job_reference_num" name="job_reference_num" type="text" pattern="[a-zA-Z0-9]{5}" required>
                     </div>
                     <div class="flex_item help_container">
-                        <span class="material-symbols-outlined help-icon">help</span>
-                        <span class="help_hint">The 5 alphanumberic characters in the job reference code, e.g. REF-<span class="bold">SE842</span></span>
+                        <span class="material-symbols-outlined help-icon" aria-label="Show job reference number help" tabindex="0" aria-describedby="job_ref_help">help</span>
+                        <span id="job_ref_help" class="help_hint" role="tooltip">The 5 alphanumberic characters in the job reference code, e.g. REF-<span class="bold">SE842</span></span>
                     </div>
                     
                     <p id="job_link">You can find your <a class="bold" href="jobs.html">job reference number and other job details here.</a></p>
@@ -67,12 +67,12 @@ Author: Ryan Tay
                     </div>
 
                     <div class="flex_item help_container">
-                        <span class="material-symbols-outlined help-icon">help</span>
-                        <span class="help_hint">Please enter your DOB with the format: <span class="bold">dd/mm/yyyy</span></span>
+                        <span class="material-symbols-outlined help-icon" aria-label="Show date of birth help" tabindex="0" aria-describedby="birth_date_help">help</span>
+                        <span id="birth_date_help" class="help_hint" role="tooltip">Please enter your DOB with the format: <span class="bold">dd/mm/yyyy</span></span>
                     </div>
                     
-                    <fieldset id="gender_fieldset">
-                        <legend>Gender: <span class="red_text">*</span></legend>
+                    <fieldset id="gender_fieldset" role="group" aria-labelledby="gender_legend">
+                        <legend id="gender_legend">Gender: <span class="red_text">*</span></legend>
                         
                         <label for="male" class="radio_container"> <!-- Nest radio buttons inside labels for accessibility (user can click label to select) -->
                             <input id="male" value="male" name="gender" type="radio" required>
@@ -126,8 +126,8 @@ Author: Ryan Tay
                         <input id="phone_num" name="phone_num" type="text" pattern="[0-9]{8,12}" required>
                     </div>
 
-                    <fieldset id="skills_fieldset">
-                        <legend>Skills: <span class="red_text">*</span></legend>
+                    <fieldset id="skills_fieldset" role="group" aria-labelledby="skills_legend">
+                        <legend id="skills_legend">Skills: <span class="red_text">*</span></legend>
                         <label for="project_management" class="checkbox_container">
                             <input id="project_management" value="project_management" name="skills[]" type="checkbox" required>
                             Project Management
@@ -160,8 +160,9 @@ Author: Ryan Tay
                             <input id="adobe_animate" value="adobe_animate" name="skills[]" type="checkbox">
                             Adobe Animate
                         </label>
+                        <!-- TO DO: add dynamic accessibility attributes with PHP to indicate the container has changed state (shown/hidden)-->
                         <label for="other" class="checkbox_container">
-                            <input id="other" value="other" name="skills[]" type="checkbox">
+                            <input id="other" value="other" name="skills[]" type="checkbox" controls="other_skills_container">
                             Other skills...
                             <div id="other_skills_container">
                                 <label for="other_skills">Enter other skills below: </label>
