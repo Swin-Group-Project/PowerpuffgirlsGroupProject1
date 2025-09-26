@@ -897,7 +897,7 @@ ul ul {
 - photo credits: https://www.esb-business-school.de/en/the-esb/partner-universities/detailsite/swinburne-university-of-technology */
     .tile-home {
         grid-area: home;
-        background-image: url("/images/swinburne_pixel.png");
+        background-image: url("../images/swinburne_pixel.png");
         background-size: cover;
         filter: grayscale(70%);
     }
