@@ -914,56 +914,75 @@ ul ul {
 
 /*END OF INDEX PAGE*/
 
-/*FOOTER [testing]
-author: lira
-date: 16 sep 2025
+/*FOOTER BAR STYLES
+author: Lira Khisha + Wei-ting Chen
+date: Sep 16 - Sep 26 2025
 */
 
 footer {
-    background: #f5f5f5;
-    /*author: venson*/
-    border-top: 1px solid #e0e0e0;
-    /*author: venson*/
-    padding: 0 16px;
-    /*changed initial value first authored by venson*/
+    background: var(--main-blue);
+    color: white;
+    padding: 0 16px; /*changed initial value first authored by venson*/
     display: flex;
-    justify-content: center;
-    /* center main content */
+    justify-content: center; /* center main content */
     align-items: center;
-    font-size: 16px;
-    /* match header link text size */
-    height: 100px;
-    /* same height as header (approx) */
+    height: 100px; /* same height as header */
     position: relative;
-    /* allow absolute positioning inside */
-}
-
-footer a {
-    color: #0366d6;
-    /*author: venson*/
-    text-decoration: none;
-    /*author: venson*/
-    margin: 0 5px;
-    /* spacing between links like nav */
-}
 
 .footer-content {
-    text-align: center;
-    /* keeps text aligned neatly */
+    text-align: center;}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-links li {
+    display: flex;
+    align-items: center;
+}
+
+.footer-links li + li::before {
+    content: "|";
+    color: black;
+    margin: 20px; /* spacing around the pipe */
+}
+
+.footer-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.6s ease-out;
+}
+
+.footer-links a:hover {
+    border-bottom: 2px solid rgb(4, 0, 132);
+    font-size: 20px;
+    transition: all 0.6s ease-out;
+}
+
+.footer-copy {
+    font-size: 8px;
+    color: black; 
+    text-align: center; 
 }
 
 .footer-logo {
     position: absolute;
-    right: 16px;
-    /* stick logo to the right */
+    right: 16px; /* stick logo to the right */
 }
 
 .footer-logo img {
-    width: 100px;
-    /* control logo size */
     height: auto;
-    /* keep proportions */
 }
+
+/*END OF FOOTER*/
+
 
 /* MEDIA QUERIES - START
 author: Ryan Tay
@@ -1095,8 +1114,9 @@ Guidance on conventionally defined media queries: w3schools.com
 - https://www.w3schools.com/css/css_rwd_mediaqueries.asp
 
 LIRA KHISHA
-Footer logo and Team members section layout are inspired from dribbble.com
+Footer logo and Team members section layout are inspired from https://dribbble.com/
 Meet the Team description ideas are taken from ChatGPT as a guidance
+Pipe separators between footer links css learnt from ChatGPT
 
 VENSON
 */
