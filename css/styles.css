@@ -1079,7 +1079,7 @@ credit: w3schools.com
     }
 
     .help_container,
-    #job_link {
+    form #job_link {
         display: none;
     }
 
@@ -1133,7 +1133,7 @@ credit: w3schools.com
     }
 
     .help_container,
-    #job_link {
+    form #job_link {
         width: 100%;
         display: none;
     }
