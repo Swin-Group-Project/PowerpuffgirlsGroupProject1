@@ -384,8 +384,8 @@ last modified: 22/9/25
 
 .help-icon,
 .help_hint {
-    color: #9ea4ad;
-    transition: color 0.15s ease-in-out;
+    color: var(--main-dark-blue);
+    transition: opacity 0.3s ease-in-out;
     transform: initial;
     /* There is no need to shift icons 3 pixels when text is aligned in the center of the element */
 }
@@ -395,15 +395,12 @@ last modified: 22/9/25
 }
 
 .help-icon:hover~span {
+    visibility: visible;
     opacity: 100;
 }
 
-.help-icon:hover,
-.help-icon:hover~span {
-    color: var(--main-dark-blue);
-}
-
 .help_hint {
+    visibility: hidden;
     opacity: 0;
     font-size: 0.9em;
     font-style: italic;
@@ -502,11 +499,11 @@ last modified: 22/9/25
 }
 
 #submit_btn {
-    background-color: var(--main-blue);
+    background-color: #4b6faa;
 }
 
 #reset_btn {
-    background-color: #e8515b;
+    background-color: #d81623;
 }
 
 #button_container>input:hover {
@@ -516,7 +513,7 @@ last modified: 22/9/25
 }
 
 #submit_btn:hover {
-    background-color: var(--main-dark-blue);
+    background-color: #2f4b6a;
 }
 
 #reset_btn:hover {
