@@ -942,12 +942,13 @@ footer {
     align-items: center;
     height: 100px; /* same height as header */
     width: 100vw;
-    position: static;
+    position: relative;
     bottom: 0;
 }
 
 .footer-content {
-    text-align: center;}
+    text-align: center;
+}
 
 .footer-links {
     list-style: none;
@@ -993,10 +994,6 @@ footer a {
 .footer-logo {
     position: absolute;
     right: 16px; /* stick logo to the right */
-}
-
-.footer-logo img {
-    height: auto;
 }
 
 /*END OF FOOTER*/
