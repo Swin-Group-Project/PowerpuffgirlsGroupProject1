@@ -862,9 +862,9 @@ ul ul {
 }
 
 #about:hover {
-  box-shadow: 0 0 15px rgba(0, 200, 255, 0.7);
-  transform: translateY(-5px);
-  transition: 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 200, 255, 0.7);
+    transform: translateY(-5px);
+    transition: 0.3s ease;
 }
 
 
@@ -1158,9 +1158,6 @@ credit: w3schools.com
     }
 
 }
-
-
-
 
 
 /* MEDIA QUERIES - END */
