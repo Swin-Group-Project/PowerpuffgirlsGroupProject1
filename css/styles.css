@@ -898,8 +898,12 @@ ul ul {
     font-size: 12px;
     letter-spacing: .06em;
     text-transform: uppercase;
-    color: #666;
+    color: #3e3e3e;
     margin: 0 0 4px;
+}
+
+.tile-home .eyebrow {
+    color: white;
 }
 
 /* Tile title and body text */
@@ -910,30 +914,7 @@ ul ul {
 
 .tile-text {
     margin: 0;
-    color: #000000;
 }
-
-/* Individual tile areas and simple colors (to match the mockup) */
-.tile-home {
-    grid-area: home;
-    background: #9ed5ff;    
-    color: #000000;
-}
-
-.tile-home:hover
-
-.tile-jobs {
-    grid-area: jobs;
-}
-
-.tile-apply {
-    grid-area: apply;
-}
-
-.tile-about {
-    grid-area: about;
-}
-
 
 /*END OF INDEX PAGE*/
 
@@ -1100,7 +1081,7 @@ credit: w3schools.com
 /* Smaller-sized screens: Mobile phones */
 @media only screen and (max-width: 700px) {
 
-    /* Apply page */
+    /* Apply page - start */
     .flex_item {
         flex-direction: column;
         align-items: stretch;
@@ -1134,6 +1115,10 @@ credit: w3schools.com
         margin-bottom: 1.5em;
     }
 
+    /* Apply page - end */
+
+    /* Job page - start */
+
     aside.job-page {
         display: none;
         /*hides the aside section on small screens*/
@@ -1153,9 +1138,13 @@ credit: w3schools.com
         height: fit-content;
     }
 
+    /* Job page - end */
+
     .job-detail {
         all: revert;
     }
+
+    /* About page */
 
 }
 
