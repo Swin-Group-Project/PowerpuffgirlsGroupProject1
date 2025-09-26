@@ -75,7 +75,7 @@ header {
 /*  Logo has surrounding whitespace and requires cropping
 Credit: Digital Ocean
 - https://www.digitalocean.com/community/tutorials/css-cropping-images-object-fit */
-img {
+header img, footer img {
     width: 300px;
     height: 70px;
     object-position: 50% 50%;
@@ -98,13 +98,13 @@ nav>ul>li>a {
     font-weight: 600;
     text-decoration: none;
     margin: 30px;
-    font-size: 24px;
+    font-size: 1.6em;
     transition: font-size 0.3s ease-in-out;
 }
 
 nav>ul>li>a:hover {
     border-bottom: white solid 0.1em;
-    font-size: 30px;
+    font-size: 2em;
 }
 
 /* BACKGROUND KEYFRAME ANIMATION
@@ -1008,8 +1008,58 @@ credit: w3schools.com
 - https://www.w3schools.com/css/css_rwd_mediaqueries.asp
 */
 
+/* Collapse header/footer */
+@media only screen and (max-width: 1200px) {
+    /* Header */
+    header {
+        grid-template-columns: 1fr auto;
+        padding: 0 10px;
+        /* removes the slogan */
+    }
+
+    header img {
+        width: 200px;
+        height: 60px;
+    }
+
+    #title-slogan {
+        display: none;
+    }
+
+    /* Footer */
+    .footer-logo {
+        display: none;
+    }
+
+
+}
+
 /* Medium-sized screens: Tablets */
 @media only screen and (max-width: 900px) {
+
+    /* Header */
+    header {
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 1em;
+        height: auto;
+    }
+
+    nav>ul {
+        font-size: 1em;
+        width: 100vw;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    nav>ul>li>a:hover {
+        border-bottom: none;
+        font-size: 1.6em;
+    }
+
+    nav>ul>li>a {
+        margin: 10px;
+    }
 
     /* Apply page */
     .flex_item {
