@@ -1087,6 +1087,23 @@ credit: w3schools.com
     .radio_container {
         margin-bottom: 1.2em;
     }
+
+    /*About page*/
+    .group-photo img {
+    width: 100%; 
+    max-width: 700px;
+    }
+    
+    #fun-facts table,
+    #fun-facts th,
+    #fun-facts td {
+        font-size: 0.9rem;
+    }
+    
+    .about-section {
+        margin: 20px;
+        padding: 20px;
+    }
 }
 
 /* Smaller-sized screens: Mobile phones */
@@ -1155,7 +1172,35 @@ credit: w3schools.com
         all: revert;
     }
 
-    /* About page */
+    /* About page - start*/
+    .members {
+        grid-template-columns: 1fr; 
+        gap: 10px;
+    }
+
+    .member {
+        padding: 15px;
+        min-height: auto;
+        font-size: 0.95rem;
+    }
+
+    #fun-facts table,
+    #fun-facts th,
+    #fun-facts td {
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+
+    .group-photo img {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .about-section {
+        margin: 10px;
+        padding: 15px;
+    }
+    /* About page - end */
 
 }
 
