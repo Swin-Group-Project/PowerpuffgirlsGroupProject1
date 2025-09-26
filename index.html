@@ -12,24 +12,32 @@
     <link rel="stylesheet" href="css/styles.css">
     <!-- RYAN: Example of embedded CSS: homepage tiles -->
     <style>
+      /* RYAN: Pixelized photos generated with pixelartvillage.com
+        - photo credits: https://www.esb-business-school.de/en/the-esb/partner-universities/detailsite/swinburne-university-of-technology */
       .tile-home {
-        background: #536c8f;
-        color: #fffef7;
         grid-area: home;
+        background-image: url("/images/swinburne_pixel.png");
+        background-size: cover;
+        filter: grayscale(70%);
+      }
+
+      .tile-home h3 {
+        font-size: 2.5em;
+        letter-spacing: 0.05em;
       }
 
       .tile-jobs {
-        background: #f8ecc8;
+        background-color: #f5f9a3;
         grid-area: jobs;
       }
 
       .tile-apply {
-        background: #f2dbcf;
+        background-color: #c8e8f9;
         grid-area: apply;
       }
 
       .tile-about {
-        background: #cbdfef;
+        background-color: #fdeaff;
         grid-area: about;
       }
 
@@ -73,10 +81,9 @@
       <!-- Section with navigation tiles -->
       <section class="tiles" role="navigation" aria-label="Feature tiles">
         <!-- Home tile (links back to index) -->
-          <a class="tile tile-home hover-effect" href="index.html" aria-label="Go to Home page">
+        <a class="tile tile-home hover-effect" href="index.html" aria-label="Go to Home page">
           <p class="eyebrow">Welcome</p>
           <h3>Home</h3>
-          <p class="tile-text">Explore Powerpuff Corp and our shared vision for the game.</p>
         </a>
 
         <!-- Jobs tile (links to jobs page) -->
@@ -91,6 +98,7 @@
           <p class="eyebrow">Join us</p>
           <h3>Apply</h3>
           <p class="tile-text">Apply by submitting your form.</p>
+          
         </a>
 
         <!-- About tile (links to about page) -->

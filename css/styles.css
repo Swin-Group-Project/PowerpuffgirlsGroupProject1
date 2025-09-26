@@ -17,7 +17,7 @@ description: applies to index.html, about.html, jobs.html, apply.html
     --main-black: #1a1c20;
     --main-white: #ffffff;
     --secondary-white: #f6faff;
-    --dark-red: #a9151e;
+    --dark-red: #c1101b;
 
     font-family: "Barlow", sans-serif;
     letter-spacing: 0.5px;
@@ -888,7 +888,7 @@ ul ul {
     border-radius: 16px;
     text-decoration: none;
     color: inherit;
-    background: #ffffff;
+    background-color: #ffffff;
     box-shadow: 0 8px 20px rgba(17, 17, 2, 0.12);
     transition: all 0.5s ease;
 }
@@ -902,14 +902,11 @@ ul ul {
     margin: 0 0 4px;
 }
 
-.tile-home .eyebrow {
-    color: white;
-}
-
 /* Tile title and body text */
 .tile h3 {
     margin: 4px 0 6px;
     font-size: 28px;
+    filter: unset;
 }
 
 .tile-text {
