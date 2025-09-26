@@ -72,6 +72,17 @@ header {
     color: rgb(230, 230, 230);
 }
 
+/*  Logo has surrounding whitespace and requires cropping
+Credit: Digital Ocean
+- https://www.digitalocean.com/community/tutorials/css-cropping-images-object-fit */
+img {
+    width: 300px;
+    height: 70px;
+    object-position: 50% 50%;
+    object-fit: cover;
+    display: inline-block;
+}
+
 nav>img,
 nav>ul {
     display: inline-block;
@@ -1117,6 +1128,9 @@ Custom checkbox/radio buttons: Stephanie Eckles
 
 Guidance on conventionally defined media queries: w3schools.com
 - https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+
+Logo has surrounding whitespace and requires cropping: Digital Ocean
+- https://www.digitalocean.com/community/tutorials/css-cropping-images-object-fit
 
 LIRA KHISHA
 Footer logo and Team members section layout are inspired from https://dribbble.com/
