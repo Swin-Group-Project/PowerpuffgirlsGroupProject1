@@ -115,7 +115,6 @@ description:
 */
 body {
     padding-top: 100px;
-    height: 100vh;
     /*makes the body take up the full height of the viewport*/
     background: black;
     overflow-y: auto;
@@ -942,7 +941,9 @@ footer {
     justify-content: center; /* center main content */
     align-items: center;
     height: 100px; /* same height as header */
-    position: relative;
+    width: 100vw;
+    position: static;
+    bottom: 0;
 }
 
 .footer-content {
@@ -1076,8 +1077,6 @@ credit: w3schools.com
     .radio_container {
         margin-bottom: 1.5em;
     }
-
-
 
     aside.job-page {
         display: none;
